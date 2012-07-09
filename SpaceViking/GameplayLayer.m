@@ -117,6 +117,30 @@
     }
 }
 
+#pragma mark -
+-(void) createObjectOfType:(GameObjectType)objectType
+                withHealth:(int)initialHealth
+                atLocation:(CGPoint)spawnLocation
+                withZValue:(int)ZValue
+{
+    if(objectType == kEnemyTypeRadarDish) {
+        CCLOG(@"Creating the Radar Enem");
+        RadarDish *radarDish = [[RadarDish alloc] initWithSpriteFrameName:@"radar_1.png"];
+        [radarDish setCharacterHealth:initialHealth];
+        [radarDish setPosition:spawnLocation];
+        [sceneSpriteBatchNode addChild:radarDish
+                                     z:ZValue
+                                   tag:kRadarDishTagValue];
+        [radarDish release];
+    }
+}
+
+-(void) createPhaserWithDirection:(PhaserDirection)phaserDirection andPosition:(CGPoint)spawnPosition
+{
+    CCLOG(@"Placeholder for Chapter 5, see below");
+}
+
+
 
 -(id) init
 {
@@ -225,28 +249,6 @@
 }
 
 
-#pragma mark -
--(void) createObjectOfType:(GameObjectType)objectType
-                withHealth:(int)initialHealth
-                atLocation:(CGPoint)spawnLocation
-                withZValue:(int)ZValue
-{
-    if(objectType == kEnemyTypeRadarDish) {
-        CCLOG(@"Creating the Radar Enem");
-        RadarDish *radarDish = [[RadarDish alloc] initWithSpriteFrameName:@"radar_1.png"];
-        [radarDish setCharacterHealth:initialHealth];
-        [radarDish setPosition:spawnLocation];
-        [sceneSpriteBatchNode addChild:radarDish
-                                     z:ZValue
-                                   tag:kRadarDishTagValue];
-        [radarDish release];
-    }
-}
-
--(void) createPhaserWithDirection:(PhaserDirection)phaserDirection andPosition:(CGPoint)spawnPosition
-{
-    CCLOG(@"Placeholder for Chapter 5, see below");
-}
 
 @end
 

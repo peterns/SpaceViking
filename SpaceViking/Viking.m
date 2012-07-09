@@ -82,6 +82,40 @@
     return kVikingFistDamage;
 }
 
+#pragma mark -
+-(CGRect) adjustBoundingBox {
+    // Adjust the bounding box to the size of the sprite
+    // without the transparent space
+    
+    CGRect vikingBoundingBox = [self boundingBox];
+    float xOffset;
+    float xCropAmount = vikingBoundingBox.size.width * 0.5482f;
+    float yCropAmount = vikingBoundingBox.size.height * 0.095f;
+    
+    if([self flipX] == NO) {
+        // Viking is facing to the right, back is on the left
+        xOffset = vikingBoundingBox.size.width * 0.1566f;
+    }
+    else {
+        // Viking is facing left, back is facing right
+        xOffset = vikingBoundingBox.size.width * 0.4217f;
+    }
+    
+    vikingBoundingBox = CGRectMake(vikingBoundingBox.origin.x + xOffset,
+                                   vikingBoundingBox.origin.y,
+                                   vikingBoundingBox.size.width - xCropAmount,
+                                   vikingBoundingBox.size.height - yCropAmount);
+    
+    if(characterState == kStateCrouching) {
+        // Shrink the bounding box to 56% of height
+        // 88 pixels on top on iPad
+        vikingBoundingBox = CGRectMake(vikingBoundingBox.origin.x, vikingBoundingBox.origin.y, vikingBoundingBox.size.width, vikingBoundingBox.size.height * 0.56f);
+    }
+    
+    return vikingBoundingBox;
+}
+
+
 -(void) applyJoystick:(SneakyJoystick *) aJoystick forTimeDelta:(float) deltaTime
 {
     CGPoint scaledVelocity = ccpMult(aJoystick.velocity, 128.0f);
@@ -195,7 +229,7 @@
             
             break;
             
-        case kStateAfterJumping:
+        case kStateAttacking:
             if (isCarryingMallet == YES) {
                 action = [CCAnimate actionWithAnimation:malletPunchAnim restoreOriginalFrame:YES];
             }
@@ -336,43 +370,12 @@
         }
         else if ((self.characterState != kStateCrouching) && (self.characterState != kStateIdle)) {
             millisecondsStayingIdle = 0.0f;
+            [self changeState:kStateIdle];
         }
     }
 }
 
 
-#pragma mark -
--(CGRect) adjustBoundingBox {
-    // Adjust the bounding box to the size of the sprite
-    // without the transparent space
-    
-    CGRect vikingBoundingBox = [self boundingBox];
-    float xOffset;
-    float xCropAmount = vikingBoundingBox.size.width * 0.5482f;
-    float yCropAmount = vikingBoundingBox.size.height * 0.095f;
-    
-    if([self flipX] == NO) {
-        // Viking is facing to the right, back is on the left
-        xOffset = vikingBoundingBox.size.width * 0.1566f;
-    }
-    else {
-        // Viking is facing left, back is facing right
-        xOffset = vikingBoundingBox.size.width * 0.4217f;
-    }
-    
-    vikingBoundingBox = CGRectMake(vikingBoundingBox.origin.x + xOffset,
-                                   vikingBoundingBox.origin.y,
-                                   vikingBoundingBox.size.width - xCropAmount,
-                                   vikingBoundingBox.size.height - yCropAmount);
-    
-    if(characterState == kStateCrouching) {
-        // Shrink the bounding box to 56% of height
-        // 88 pixels on top on iPad
-        vikingBoundingBox = CGRectMake(vikingBoundingBox.origin.x, vikingBoundingBox.origin.y, vikingBoundingBox.size.width, vikingBoundingBox.size.height * 0.56f);
-    }
-    
-    return vikingBoundingBox;
-}
 
 #pragma mark -
 -(void) initAnimations {
@@ -427,6 +430,7 @@
         myLastPunch = kRightHook;
         millisecondsStayingIdle = 0.0f;
         isCarryingMallet = NO;
+        characterState = kStateIdle;
         [self initAnimations];
     }
     
