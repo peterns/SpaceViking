@@ -430,7 +430,7 @@
         myLastPunch = kRightHook;
         millisecondsStayingIdle = 0.0f;
         isCarryingMallet = NO;
-        characterState = kStateIdle;
+        //characterState = kStateIdle;
         [self initAnimations];
     }
     
