@@ -34,6 +34,25 @@
 		AE37992415A31446009BC993 /* an1_anim4.png in Resources */ = {isa = PBXBuildFile; fileRef = AE37992015A31446009BC993 /* an1_anim4.png */; };
 		AE476E7F15A42CBA00EA5358 /* GameCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE476E7E15A42CBA00EA5358 /* GameCharacter.m */; };
 		AE476E8315A436D300EA5358 /* RadarDish.m in Sources */ = {isa = PBXBuildFile; fileRef = AE476E8215A436D300EA5358 /* RadarDish.m */; };
+		AE49FD5415BF598A00F2C8E5 /* GenericMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD3E15BF598A00F2C8E5 /* GenericMenuBackground.png */; };
+		AE49FD5515BF598A00F2C8E5 /* intro1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD4015BF598A00F2C8E5 /* intro1.png */; };
+		AE49FD5615BF598A00F2C8E5 /* intro2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD4115BF598A00F2C8E5 /* intro2.png */; };
+		AE49FD5715BF598A00F2C8E5 /* intro3.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD4215BF598A00F2C8E5 /* intro3.png */; };
+		AE49FD5815BF598A00F2C8E5 /* intro4.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD4315BF598A00F2C8E5 /* intro4.png */; };
+		AE49FD5915BF598A00F2C8E5 /* intro5.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD4415BF598A00F2C8E5 /* intro5.png */; };
+		AE49FD5A15BF598A00F2C8E5 /* intro6.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD4515BF598A00F2C8E5 /* intro6.png */; };
+		AE49FD5B15BF598A00F2C8E5 /* intro7.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD4615BF598A00F2C8E5 /* intro7.png */; };
+		AE49FD5C15BF598A00F2C8E5 /* LevelCompleteAlive.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD4815BF598A00F2C8E5 /* LevelCompleteAlive.png */; };
+		AE49FD5D15BF598A00F2C8E5 /* LevelCompleteDead.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD4915BF598A00F2C8E5 /* LevelCompleteDead.png */; };
+		AE49FD5E15BF598A00F2C8E5 /* BuyBookButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD4B15BF598A00F2C8E5 /* BuyBookButtonNormal.png */; };
+		AE49FD5F15BF598A00F2C8E5 /* BuyBookButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD4C15BF598A00F2C8E5 /* BuyBookButtonSelected.png */; };
+		AE49FD6015BF598A00F2C8E5 /* MainMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD4D15BF598A00F2C8E5 /* MainMenuBackground.png */; };
+		AE49FD6115BF598A00F2C8E5 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD4E15BF598A00F2C8E5 /* menu.png */; };
+		AE49FD6215BF598A00F2C8E5 /* OptionsButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD4F15BF598A00F2C8E5 /* OptionsButtonNormal.png */; };
+		AE49FD6315BF598A00F2C8E5 /* OptionsButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD5015BF598A00F2C8E5 /* OptionsButtonSelected.png */; };
+		AE49FD6415BF598A00F2C8E5 /* PlayGameButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD5115BF598A00F2C8E5 /* PlayGameButtonNormal.png */; };
+		AE49FD6515BF598A00F2C8E5 /* PlayGameButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD5215BF598A00F2C8E5 /* PlayGameButtonSelected.png */; };
+		AE49FD6615BF598A00F2C8E5 /* VikingFloating.png in Resources */ = {isa = PBXBuildFile; fileRef = AE49FD5315BF598A00F2C8E5 /* VikingFloating.png */; };
 		AE9982D7159DBB5D005B458C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9982D6159DBB5D005B458C /* QuartzCore.framework */; };
 		AE9982D9159DBB5D005B458C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9982D8159DBB5D005B458C /* OpenGLES.framework */; };
 		AE9982DB159DBB5D005B458C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9982DA159DBB5D005B458C /* OpenAL.framework */; };
@@ -241,6 +260,25 @@
 		AE476E7E15A42CBA00EA5358 /* GameCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCharacter.m; sourceTree = "<group>"; };
 		AE476E8115A436D300EA5358 /* RadarDish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarDish.h; sourceTree = "<group>"; };
 		AE476E8215A436D300EA5358 /* RadarDish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarDish.m; sourceTree = "<group>"; };
+		AE49FD3E15BF598A00F2C8E5 /* GenericMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenericMenuBackground.png; sourceTree = "<group>"; };
+		AE49FD4015BF598A00F2C8E5 /* intro1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro1.png; sourceTree = "<group>"; };
+		AE49FD4115BF598A00F2C8E5 /* intro2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro2.png; sourceTree = "<group>"; };
+		AE49FD4215BF598A00F2C8E5 /* intro3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro3.png; sourceTree = "<group>"; };
+		AE49FD4315BF598A00F2C8E5 /* intro4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro4.png; sourceTree = "<group>"; };
+		AE49FD4415BF598A00F2C8E5 /* intro5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro5.png; sourceTree = "<group>"; };
+		AE49FD4515BF598A00F2C8E5 /* intro6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro6.png; sourceTree = "<group>"; };
+		AE49FD4615BF598A00F2C8E5 /* intro7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro7.png; sourceTree = "<group>"; };
+		AE49FD4815BF598A00F2C8E5 /* LevelCompleteAlive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LevelCompleteAlive.png; sourceTree = "<group>"; };
+		AE49FD4915BF598A00F2C8E5 /* LevelCompleteDead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LevelCompleteDead.png; sourceTree = "<group>"; };
+		AE49FD4B15BF598A00F2C8E5 /* BuyBookButtonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BuyBookButtonNormal.png; sourceTree = "<group>"; };
+		AE49FD4C15BF598A00F2C8E5 /* BuyBookButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BuyBookButtonSelected.png; sourceTree = "<group>"; };
+		AE49FD4D15BF598A00F2C8E5 /* MainMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainMenuBackground.png; sourceTree = "<group>"; };
+		AE49FD4E15BF598A00F2C8E5 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		AE49FD4F15BF598A00F2C8E5 /* OptionsButtonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OptionsButtonNormal.png; sourceTree = "<group>"; };
+		AE49FD5015BF598A00F2C8E5 /* OptionsButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OptionsButtonSelected.png; sourceTree = "<group>"; };
+		AE49FD5115BF598A00F2C8E5 /* PlayGameButtonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayGameButtonNormal.png; sourceTree = "<group>"; };
+		AE49FD5215BF598A00F2C8E5 /* PlayGameButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayGameButtonSelected.png; sourceTree = "<group>"; };
+		AE49FD5315BF598A00F2C8E5 /* VikingFloating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VikingFloating.png; sourceTree = "<group>"; };
 		AE6E2C5915BE90BF0028C600 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
 		AE6E2C5A15BE90BF0028C600 /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
 		AE6E2C9315BEA64F0028C600 /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
@@ -679,6 +717,64 @@
 			name = Singletons;
 			sourceTree = "<group>";
 		};
+		AE49FD3C15BF598A00F2C8E5 /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				AE49FD3D15BF598A00F2C8E5 /* Credits */,
+				AE49FD3F15BF598A00F2C8E5 /* Intro */,
+				AE49FD4715BF598A00F2C8E5 /* Level Complete */,
+				AE49FD4A15BF598A00F2C8E5 /* Main */,
+			);
+			path = Menus;
+			sourceTree = "<group>";
+		};
+		AE49FD3D15BF598A00F2C8E5 /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				AE49FD3E15BF598A00F2C8E5 /* GenericMenuBackground.png */,
+			);
+			path = Credits;
+			sourceTree = "<group>";
+		};
+		AE49FD3F15BF598A00F2C8E5 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				AE49FD4015BF598A00F2C8E5 /* intro1.png */,
+				AE49FD4115BF598A00F2C8E5 /* intro2.png */,
+				AE49FD4215BF598A00F2C8E5 /* intro3.png */,
+				AE49FD4315BF598A00F2C8E5 /* intro4.png */,
+				AE49FD4415BF598A00F2C8E5 /* intro5.png */,
+				AE49FD4515BF598A00F2C8E5 /* intro6.png */,
+				AE49FD4615BF598A00F2C8E5 /* intro7.png */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		AE49FD4715BF598A00F2C8E5 /* Level Complete */ = {
+			isa = PBXGroup;
+			children = (
+				AE49FD4815BF598A00F2C8E5 /* LevelCompleteAlive.png */,
+				AE49FD4915BF598A00F2C8E5 /* LevelCompleteDead.png */,
+			);
+			path = "Level Complete";
+			sourceTree = "<group>";
+		};
+		AE49FD4A15BF598A00F2C8E5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AE49FD4B15BF598A00F2C8E5 /* BuyBookButtonNormal.png */,
+				AE49FD4C15BF598A00F2C8E5 /* BuyBookButtonSelected.png */,
+				AE49FD4D15BF598A00F2C8E5 /* MainMenuBackground.png */,
+				AE49FD4E15BF598A00F2C8E5 /* menu.png */,
+				AE49FD4F15BF598A00F2C8E5 /* OptionsButtonNormal.png */,
+				AE49FD5015BF598A00F2C8E5 /* OptionsButtonSelected.png */,
+				AE49FD5115BF598A00F2C8E5 /* PlayGameButtonNormal.png */,
+				AE49FD5215BF598A00F2C8E5 /* PlayGameButtonSelected.png */,
+				AE49FD5315BF598A00F2C8E5 /* VikingFloating.png */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		AE6E2C5D15BEA3E00028C600 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
@@ -1114,6 +1210,7 @@
 		AE998447159DBD81005B458C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AE49FD3C15BF598A00F2C8E5 /* Menus */,
 				AEBD392115BF58C400F8D892 /* Fonts */,
 				29885F6B15BDDABC00F0B892 /* SpaceVikingFont.png */,
 				29885F6C15BDDABC00F0B892 /* SpaceVikingFont.fnt */,
@@ -1370,6 +1467,25 @@
 				29885F6E15BDDABC00F0B892 /* SpaceVikingFont.fnt in Resources */,
 				AEBD392415BF58C400F8D892 /* VikingSpeechFont64.fnt in Resources */,
 				AEBD392515BF58C400F8D892 /* VikingSpeechFont64.png in Resources */,
+				AE49FD5415BF598A00F2C8E5 /* GenericMenuBackground.png in Resources */,
+				AE49FD5515BF598A00F2C8E5 /* intro1.png in Resources */,
+				AE49FD5615BF598A00F2C8E5 /* intro2.png in Resources */,
+				AE49FD5715BF598A00F2C8E5 /* intro3.png in Resources */,
+				AE49FD5815BF598A00F2C8E5 /* intro4.png in Resources */,
+				AE49FD5915BF598A00F2C8E5 /* intro5.png in Resources */,
+				AE49FD5A15BF598A00F2C8E5 /* intro6.png in Resources */,
+				AE49FD5B15BF598A00F2C8E5 /* intro7.png in Resources */,
+				AE49FD5C15BF598A00F2C8E5 /* LevelCompleteAlive.png in Resources */,
+				AE49FD5D15BF598A00F2C8E5 /* LevelCompleteDead.png in Resources */,
+				AE49FD5E15BF598A00F2C8E5 /* BuyBookButtonNormal.png in Resources */,
+				AE49FD5F15BF598A00F2C8E5 /* BuyBookButtonSelected.png in Resources */,
+				AE49FD6015BF598A00F2C8E5 /* MainMenuBackground.png in Resources */,
+				AE49FD6115BF598A00F2C8E5 /* menu.png in Resources */,
+				AE49FD6215BF598A00F2C8E5 /* OptionsButtonNormal.png in Resources */,
+				AE49FD6315BF598A00F2C8E5 /* OptionsButtonSelected.png in Resources */,
+				AE49FD6415BF598A00F2C8E5 /* PlayGameButtonNormal.png in Resources */,
+				AE49FD6515BF598A00F2C8E5 /* PlayGameButtonSelected.png in Resources */,
+				AE49FD6615BF598A00F2C8E5 /* VikingFloating.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
