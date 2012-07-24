@@ -11,7 +11,8 @@
 #import "AppDelegate.h"
 #import "GameConfig.h"
 #import "RootViewController.h"
-#import "GameScene.h"
+#import "GameManager.h"
+
 
 @implementation AppDelegate
 
@@ -111,7 +112,8 @@
 	
 	// Run the intro Scene
 	//[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
-    [[CCDirector sharedDirector] runWithScene:[GameScene node]];
+    //[[CCDirector sharedDirector] runWithScene:[GameScene node]];
+    [[GameManager sharedGameManager] runSceneWithID:kMainMenuScene];
 }
 
 

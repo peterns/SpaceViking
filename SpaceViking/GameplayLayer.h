@@ -16,6 +16,7 @@
 #import "CommonProtocols.h"
 #import "RadarDish.h"
 #import "Viking.h"
+#import "GameManager.h"
 
 @interface GameplayLayer : CCLayer
 {

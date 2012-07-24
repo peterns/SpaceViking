@@ -115,6 +115,22 @@
     for(GameCharacter *tempChar in listOfGameObjects) {
         [tempChar updateStateWithDeltaTime:deltaTime andListOfGameObjects:listOfGameObjects];
     }
+    
+    // Chapter 7 Additions
+    // Check to see if the Viking is dead
+    GameCharacter *tempChar = (GameCharacter*)[sceneSpriteBatchNode getChildByTag:kVikingSpriteTagValue];
+    
+    if (([tempChar characterState] == kStateDead) && ([tempChar numberOfRunningActions] == 0)) {
+        [[GameManager sharedGameManager] setHasPlayerDied:YES];
+        [[GameManager sharedGameManager] runSceneWithID:kLevelCompleteScene];
+    }
+    
+    // Check to see if the RadarDish is dead
+    tempChar = (GameCharacter*)[sceneSpriteBatchNode getChildByTag:kRadarDishTagValue];
+    
+    if (([tempChar characterState] == kStateDead) && ([tempChar numberOfRunningActions] == 0)) {
+        [[GameManager sharedGameManager] runSceneWithID:kLevelCompleteScene];
+    }
 }
 
 #pragma mark -
