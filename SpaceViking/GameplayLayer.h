@@ -16,9 +16,14 @@
 #import "CommonProtocols.h"
 #import "RadarDish.h"
 #import "Viking.h"
+#import "Mallet.h"
+#import "Health.h"
+#import "SpaceCargoShip.h"
+#import "EnemyRobot.h"
+#import "PhaserBullet.h"
 #import "GameManager.h"
 
-@interface GameplayLayer : CCLayer
+@interface GameplayLayer : CCLayer <GameplayLayerDelegate>
 {
     CCSprite *vikingSprite;
     SneakyJoystick *leftJoystick;

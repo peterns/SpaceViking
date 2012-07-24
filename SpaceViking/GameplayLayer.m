@@ -139,6 +139,7 @@
                 atLocation:(CGPoint)spawnLocation
                 withZValue:(int)ZValue
 {
+    
     if(objectType == kEnemyTypeRadarDish) {
         CCLOG(@"Creating the Radar Enem");
         RadarDish *radarDish = [[RadarDish alloc] initWithSpriteFrameName:@"radar_1.png"];
@@ -148,12 +149,70 @@
                                      z:ZValue
                                    tag:kRadarDishTagValue];
         [radarDish release];
+    } else if (objectType == kEnemyTypeAlienRobot) {
+        CCLOG(@"Creating the Alien Robot");
+        EnemyRobot *enemyRobot = [[EnemyRobot alloc] initWithSpriteFrameName:@"an1_anim1.png"];
+        [enemyRobot setCharacterHealth:initialHealth];
+        [enemyRobot setPosition:spawnLocation];
+        [enemyRobot setCharacterState:kStateSpawning];
+        [sceneSpriteBatchNode addChild:enemyRobot z:ZValue];
+        [enemyRobot setDelegate:self];
+        CCLabelBMFont *debugLabel = [CCLabelBMFont labelWithString:@"NoneNonde" fntFile:@"SpaceVikingFont.fnt"];
+        [self addChild:debugLabel];
+        [enemyRobot setMyDebugLabel:debugLabel];
+        //[debugLabel release];
+        [enemyRobot release];
     }
+    
+    // added by me
+    else if(objectType == kPowerUpTypeMallet) {
+        CCLOG(@"Creating the Mallet PowerUP");
+        Mallet *mallet = [[Mallet alloc] initWithSpriteFrameName:@"mallet_1.png"];
+        [mallet setPosition:spawnLocation];
+        [sceneSpriteBatchNode addChild:mallet z:ZValue tag:kMalletTagValie];
+        [mallet release];
+    }
+    
+    else if (objectType == kPowerUpTypeHealth) {
+        CCLOG(@"Creating the Health PowerUP");
+        Health *health = [[Health alloc] initWithSpriteFrameName:@"sandwich_1.png"];
+        [health setPosition:spawnLocation];
+        [sceneSpriteBatchNode addChild:health z:ZValue tag:kPowerUpTypeHealth];
+        [health release];
+        
+    }
+    
+    else if (objectType == kEnemyTypeSpaceCargoShip) {
+        CCLOG(@"Creating the SpaceCargoShip");
+        SpaceCargoShip *ship = [[SpaceCargoShip alloc] initWithSpriteFrameName:@"ship_2.png"];
+        [ship setPosition:spawnLocation];
+        ship.delegate = self;
+        [sceneSpriteBatchNode addChild:ship z:ZValue tag:kEnemyTypeSpaceCargoShip];
+    }
+    
 }
 
 -(void) createPhaserWithDirection:(PhaserDirection)phaserDirection andPosition:(CGPoint)spawnPosition
 {
-    CCLOG(@"Placeholder for Chapter 5, see below");
+    PhaserBullet *phaserBullet = [[PhaserBullet alloc] initWithSpriteFrameName:@"beam_1.png"];
+    [phaserBullet setPosition:spawnPosition];
+    [phaserBullet setMyDirection:phaserDirection];
+    [phaserBullet setCharacterState:kStateSpawning];
+    [sceneSpriteBatchNode addChild:phaserBullet];
+    [phaserBullet release];
+}
+
+-(void) addEnemy {
+    CGSize screenSize = [CCDirector sharedDirector].winSize;
+    RadarDish *radarDish = (RadarDish*) [sceneSpriteBatchNode getChildByTag:kRadarDishTagValue];
+    
+    if (radarDish != nil) {
+        if ([radarDish characterState] != kStateDead) {
+            [self createObjectOfType:kEnemyTypeAlienRobot withHealth:100 atLocation:ccp(screenSize.width * 0.195f, screenSize.height * 0.1432f) withZValue:2];
+        } else {
+            [self unschedule:@selector(addEnemy)];
+        }
+    }
 }
 
 
@@ -208,8 +267,34 @@
         
         [self createObjectOfType:kEnemyTypeRadarDish withHealth:100 atLocation:ccp(screenSize.width * 0.878f, screenSize.height * 0.13f) withZValue:10];
         
+        [self createObjectOfType:kEnemyTypeRadarDish withHealth:100 atLocation:ccp(screenSize.width * 0.10f, screenSize.height * 0.13f) withZValue:11];
+            
+        //id wavesAction = [CCWaves actionWithWaves:5 amplitude:20 horizontal:NO vertical:YES grid:ccg(15,10) duration:20];
+        
+        //[sceneSpriteBatchNode runAction:[CCRepeatForever actionWithAction:wavesAction]];
+        
+        //CCLabelTTF *gameBeginLabel = [CCLabelTTF labelWithString:@"Game Start" fontName:@"Helvetica" fontSize:64];
+        // Better to use atlas bmp 
+        CCLabelBMFont *gameBeginLabel = [CCLabelBMFont labelWithString:@"Game Start" fntFile:@"SpaceVikingFont.fnt"];
+        
+        [gameBeginLabel setPosition:ccp(screenSize.width/2, screenSize.height/2)];
+        [self addChild:gameBeginLabel];
+        
+        id labelAction = [CCSpawn actions:[CCScaleBy actionWithDuration:2.0f scale:4], [CCFadeOut actionWithDuration:2.0f], 
+                           nil];
+     
+        [gameBeginLabel runAction:labelAction];
         
         [self scheduleUpdate];
+        [self schedule:@selector(addEnemy) interval:10.0f];
+        
+        
+        //Could add mallet directly to the scene
+        //[self createObjectOfType:kPowerUpTypeMallet withHealth:100 atLocation:ccp(screenSize.width * 0.621f, screenSize.height * 0.82f) withZValue:10];
+        
+        [self createObjectOfType:kEnemyTypeSpaceCargoShip withHealth:100 atLocation:ccp(screenSize.width * -1.0f, screenSize.height) withZValue:40];
+        
+        
         //[chapter2SpriteBatchNode addChild:vikingSprite];
         
         

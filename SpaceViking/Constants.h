@@ -19,6 +19,7 @@
 
 #define kMainMenuTagValue 10
 #define kSceneMenuTagValue 20
+#define kMalletTagValie 11
 
 typedef enum {
     kNoSceneUninitialized = 0,
