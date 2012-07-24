@@ -12,6 +12,17 @@
 		293CF45C15ACCC4000B9CC4A /* SpaceCargoShip.m in Sources */ = {isa = PBXBuildFile; fileRef = 293CF45B15ACCC4000B9CC4A /* SpaceCargoShip.m */; };
 		29885F6D15BDDABC00F0B892 /* SpaceVikingFont.png in Resources */ = {isa = PBXBuildFile; fileRef = 29885F6B15BDDABC00F0B892 /* SpaceVikingFont.png */; };
 		29885F6E15BDDABC00F0B892 /* SpaceVikingFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 29885F6C15BDDABC00F0B892 /* SpaceVikingFont.fnt */; };
+		29A1CC7B15BF4EC000C0C14E /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C5A15BE90BF0028C600 /* GameManager.m */; };
+		29A1CC7D15BF4F4E00C0C14E /* LevelCompleteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9E15BEBB2A0028C600 /* LevelCompleteLayer.m */; };
+		29A1CC7E15BF4F5200C0C14E /* LevelCompleteScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA015BEBB2A0028C600 /* LevelCompleteScene.m */; };
+		29A1CC7F15BF4F5900C0C14E /* CreditsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA215BEBB3E0028C600 /* CreditsLayer.m */; };
+		29A1CC8015BF4F5D00C0C14E /* CreditsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA415BEBB3E0028C600 /* CreditsScene.m */; };
+		29A1CC8115BF4F6200C0C14E /* OptionsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA615BEBB510028C600 /* OptionsLayer.m */; };
+		29A1CC8215BF4F6500C0C14E /* OptionsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA815BEBB510028C600 /* OptionsScene.m */; };
+		29A1CC8315BF4F6C00C0C14E /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9415BEA64F0028C600 /* MainMenuScene.m */; };
+		29A1CC8415BF4F7100C0C14E /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9715BEA6820028C600 /* MainMenuLayer.m */; };
+		29A1CC8515BF4F7600C0C14E /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9A15BEBB120028C600 /* IntroLayer.m */; };
+		29A1CC8615BF4F7900C0C14E /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9C15BEBB120028C600 /* IntroScene.m */; };
 		29DAA4B115B74CD3004BF9D8 /* EnemyRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DAA4B015B74CD3004BF9D8 /* EnemyRobot.m */; };
 		29DAA4B415B76703004BF9D8 /* PhaserBullet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29DAA4B315B76703004BF9D8 /* PhaserBullet.plist */; };
 		29DAA4B715B7684E004BF9D8 /* PhaserBullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DAA4B615B7684E004BF9D8 /* PhaserBullet.m */; };
@@ -34,38 +45,6 @@
 		AE37992415A31446009BC993 /* an1_anim4.png in Resources */ = {isa = PBXBuildFile; fileRef = AE37992015A31446009BC993 /* an1_anim4.png */; };
 		AE476E7F15A42CBA00EA5358 /* GameCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE476E7E15A42CBA00EA5358 /* GameCharacter.m */; };
 		AE476E8315A436D300EA5358 /* RadarDish.m in Sources */ = {isa = PBXBuildFile; fileRef = AE476E8215A436D300EA5358 /* RadarDish.m */; };
-		AE6E2C5B15BE90BF0028C600 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C5A15BE90BF0028C600 /* GameManager.m */; };
-		AE6E2C7B15BEA5210028C600 /* GenericMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6515BEA5210028C600 /* GenericMenuBackground.png */; };
-		AE6E2C7C15BEA5210028C600 /* intro1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6715BEA5210028C600 /* intro1.png */; };
-		AE6E2C7D15BEA5210028C600 /* intro2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6815BEA5210028C600 /* intro2.png */; };
-		AE6E2C7E15BEA5210028C600 /* intro3.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6915BEA5210028C600 /* intro3.png */; };
-		AE6E2C7F15BEA5210028C600 /* intro4.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6A15BEA5210028C600 /* intro4.png */; };
-		AE6E2C8015BEA5210028C600 /* intro5.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6B15BEA5210028C600 /* intro5.png */; };
-		AE6E2C8115BEA5210028C600 /* intro6.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6C15BEA5210028C600 /* intro6.png */; };
-		AE6E2C8215BEA5210028C600 /* intro7.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6D15BEA5210028C600 /* intro7.png */; };
-		AE6E2C8315BEA5210028C600 /* LevelCompleteAlive.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6F15BEA5210028C600 /* LevelCompleteAlive.png */; };
-		AE6E2C8415BEA5210028C600 /* LevelCompleteDead.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7015BEA5210028C600 /* LevelCompleteDead.png */; };
-		AE6E2C8515BEA5210028C600 /* BuyBookButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7215BEA5210028C600 /* BuyBookButtonNormal.png */; };
-		AE6E2C8615BEA5210028C600 /* BuyBookButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7315BEA5210028C600 /* BuyBookButtonSelected.png */; };
-		AE6E2C8715BEA5210028C600 /* MainMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7415BEA5210028C600 /* MainMenuBackground.png */; };
-		AE6E2C8815BEA5210028C600 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7515BEA5210028C600 /* menu.png */; };
-		AE6E2C8915BEA5210028C600 /* OptionsButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7615BEA5210028C600 /* OptionsButtonNormal.png */; };
-		AE6E2C8A15BEA5210028C600 /* OptionsButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7715BEA5210028C600 /* OptionsButtonSelected.png */; };
-		AE6E2C8B15BEA5210028C600 /* PlayGameButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7815BEA5210028C600 /* PlayGameButtonNormal.png */; };
-		AE6E2C8C15BEA5210028C600 /* PlayGameButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7915BEA5210028C600 /* PlayGameButtonSelected.png */; };
-		AE6E2C8D15BEA5210028C600 /* VikingFloating.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7A15BEA5210028C600 /* VikingFloating.png */; };
-		AE6E2C9115BEA5710028C600 /* VikingSpeechFont64.fnt in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C8F15BEA5710028C600 /* VikingSpeechFont64.fnt */; };
-		AE6E2C9215BEA5710028C600 /* VikingSpeechFont64.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C9015BEA5710028C600 /* VikingSpeechFont64.png */; };
-		AE6E2C9515BEA64F0028C600 /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9415BEA64F0028C600 /* MainMenuScene.m */; };
-		AE6E2C9815BEA6820028C600 /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9715BEA6820028C600 /* MainMenuLayer.m */; };
-		AE6E2CA915BEBD420028C600 /* LevelCompleteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9E15BEBB2A0028C600 /* LevelCompleteLayer.m */; };
-		AE6E2CAA15BEBD450028C600 /* LevelCompleteScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA015BEBB2A0028C600 /* LevelCompleteScene.m */; };
-		AE6E2CAB15BEBD4A0028C600 /* CreditsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA215BEBB3E0028C600 /* CreditsLayer.m */; };
-		AE6E2CAC15BEBD4D0028C600 /* CreditsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA415BEBB3E0028C600 /* CreditsScene.m */; };
-		AE6E2CAD15BEBD510028C600 /* OptionsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA615BEBB510028C600 /* OptionsLayer.m */; };
-		AE6E2CAE15BEBD550028C600 /* OptionsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA815BEBB510028C600 /* OptionsScene.m */; };
-		AE6E2CAF15BEBD5C0028C600 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9A15BEBB120028C600 /* IntroLayer.m */; };
-		AE6E2CB015BEBD600028C600 /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9C15BEBB120028C600 /* IntroScene.m */; };
 		AE9982D7159DBB5D005B458C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9982D6159DBB5D005B458C /* QuartzCore.framework */; };
 		AE9982D9159DBB5D005B458C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9982D8159DBB5D005B458C /* OpenGLES.framework */; };
 		AE9982DB159DBB5D005B458C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9982DA159DBB5D005B458C /* OpenAL.framework */; };
@@ -262,27 +241,6 @@
 		AE476E8215A436D300EA5358 /* RadarDish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarDish.m; sourceTree = "<group>"; };
 		AE6E2C5915BE90BF0028C600 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
 		AE6E2C5A15BE90BF0028C600 /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
-		AE6E2C6515BEA5210028C600 /* GenericMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenericMenuBackground.png; sourceTree = "<group>"; };
-		AE6E2C6715BEA5210028C600 /* intro1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro1.png; sourceTree = "<group>"; };
-		AE6E2C6815BEA5210028C600 /* intro2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro2.png; sourceTree = "<group>"; };
-		AE6E2C6915BEA5210028C600 /* intro3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro3.png; sourceTree = "<group>"; };
-		AE6E2C6A15BEA5210028C600 /* intro4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro4.png; sourceTree = "<group>"; };
-		AE6E2C6B15BEA5210028C600 /* intro5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro5.png; sourceTree = "<group>"; };
-		AE6E2C6C15BEA5210028C600 /* intro6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro6.png; sourceTree = "<group>"; };
-		AE6E2C6D15BEA5210028C600 /* intro7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro7.png; sourceTree = "<group>"; };
-		AE6E2C6F15BEA5210028C600 /* LevelCompleteAlive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LevelCompleteAlive.png; sourceTree = "<group>"; };
-		AE6E2C7015BEA5210028C600 /* LevelCompleteDead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LevelCompleteDead.png; sourceTree = "<group>"; };
-		AE6E2C7215BEA5210028C600 /* BuyBookButtonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BuyBookButtonNormal.png; sourceTree = "<group>"; };
-		AE6E2C7315BEA5210028C600 /* BuyBookButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BuyBookButtonSelected.png; sourceTree = "<group>"; };
-		AE6E2C7415BEA5210028C600 /* MainMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainMenuBackground.png; sourceTree = "<group>"; };
-		AE6E2C7515BEA5210028C600 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
-		AE6E2C7615BEA5210028C600 /* OptionsButtonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OptionsButtonNormal.png; sourceTree = "<group>"; };
-		AE6E2C7715BEA5210028C600 /* OptionsButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OptionsButtonSelected.png; sourceTree = "<group>"; };
-		AE6E2C7815BEA5210028C600 /* PlayGameButtonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayGameButtonNormal.png; sourceTree = "<group>"; };
-		AE6E2C7915BEA5210028C600 /* PlayGameButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayGameButtonSelected.png; sourceTree = "<group>"; };
-		AE6E2C7A15BEA5210028C600 /* VikingFloating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VikingFloating.png; sourceTree = "<group>"; };
-		AE6E2C8F15BEA5710028C600 /* VikingSpeechFont64.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VikingSpeechFont64.fnt; sourceTree = "<group>"; };
-		AE6E2C9015BEA5710028C600 /* VikingSpeechFont64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VikingSpeechFont64.png; sourceTree = "<group>"; };
 		AE6E2C9315BEA64F0028C600 /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
 		AE6E2C9415BEA64F0028C600 /* MainMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuScene.m; sourceTree = "<group>"; };
 		AE6E2C9615BEA6820028C600 /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
@@ -780,73 +738,6 @@
 				AEE76F4D159EF0DF00D6FB14 /* GameScene.m */,
 			);
 			name = Scene1;
-			sourceTree = "<group>";
-		};
-		AE6E2C6315BEA5210028C600 /* Menus */ = {
-			isa = PBXGroup;
-			children = (
-				AE6E2C6415BEA5210028C600 /* Credits */,
-				AE6E2C6615BEA5210028C600 /* Intro */,
-				AE6E2C6E15BEA5210028C600 /* Level Complete */,
-				AE6E2C7115BEA5210028C600 /* Main */,
-			);
-			path = Menus;
-			sourceTree = "<group>";
-		};
-		AE6E2C6415BEA5210028C600 /* Credits */ = {
-			isa = PBXGroup;
-			children = (
-				AE6E2C6515BEA5210028C600 /* GenericMenuBackground.png */,
-			);
-			path = Credits;
-			sourceTree = "<group>";
-		};
-		AE6E2C6615BEA5210028C600 /* Intro */ = {
-			isa = PBXGroup;
-			children = (
-				AE6E2C6715BEA5210028C600 /* intro1.png */,
-				AE6E2C6815BEA5210028C600 /* intro2.png */,
-				AE6E2C6915BEA5210028C600 /* intro3.png */,
-				AE6E2C6A15BEA5210028C600 /* intro4.png */,
-				AE6E2C6B15BEA5210028C600 /* intro5.png */,
-				AE6E2C6C15BEA5210028C600 /* intro6.png */,
-				AE6E2C6D15BEA5210028C600 /* intro7.png */,
-			);
-			path = Intro;
-			sourceTree = "<group>";
-		};
-		AE6E2C6E15BEA5210028C600 /* Level Complete */ = {
-			isa = PBXGroup;
-			children = (
-				AE6E2C6F15BEA5210028C600 /* LevelCompleteAlive.png */,
-				AE6E2C7015BEA5210028C600 /* LevelCompleteDead.png */,
-			);
-			path = "Level Complete";
-			sourceTree = "<group>";
-		};
-		AE6E2C7115BEA5210028C600 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				AE6E2C7215BEA5210028C600 /* BuyBookButtonNormal.png */,
-				AE6E2C7315BEA5210028C600 /* BuyBookButtonSelected.png */,
-				AE6E2C7415BEA5210028C600 /* MainMenuBackground.png */,
-				AE6E2C7515BEA5210028C600 /* menu.png */,
-				AE6E2C7615BEA5210028C600 /* OptionsButtonNormal.png */,
-				AE6E2C7715BEA5210028C600 /* OptionsButtonSelected.png */,
-				AE6E2C7815BEA5210028C600 /* PlayGameButtonNormal.png */,
-				AE6E2C7915BEA5210028C600 /* PlayGameButtonSelected.png */,
-				AE6E2C7A15BEA5210028C600 /* VikingFloating.png */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		AE6E2C8E15BEA5710028C600 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				AE6E2C8F15BEA5710028C600 /* VikingSpeechFont64.fnt */,
-				AE6E2C9015BEA5710028C600 /* VikingSpeechFont64.png */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		AE9982C7159DBB5C005B458C = {
@@ -1588,6 +1479,17 @@
 				293CF45C15ACCC4000B9CC4A /* SpaceCargoShip.m in Sources */,
 				29DAA4B115B74CD3004BF9D8 /* EnemyRobot.m in Sources */,
 				29DAA4B715B7684E004BF9D8 /* PhaserBullet.m in Sources */,
+				29A1CC7B15BF4EC000C0C14E /* GameManager.m in Sources */,
+				29A1CC7D15BF4F4E00C0C14E /* LevelCompleteLayer.m in Sources */,
+				29A1CC7E15BF4F5200C0C14E /* LevelCompleteScene.m in Sources */,
+				29A1CC7F15BF4F5900C0C14E /* CreditsLayer.m in Sources */,
+				29A1CC8015BF4F5D00C0C14E /* CreditsScene.m in Sources */,
+				29A1CC8115BF4F6200C0C14E /* OptionsLayer.m in Sources */,
+				29A1CC8215BF4F6500C0C14E /* OptionsScene.m in Sources */,
+				29A1CC8315BF4F6C00C0C14E /* MainMenuScene.m in Sources */,
+				29A1CC8415BF4F7100C0C14E /* MainMenuLayer.m in Sources */,
+				29A1CC8515BF4F7600C0C14E /* IntroLayer.m in Sources */,
+				29A1CC8615BF4F7900C0C14E /* IntroScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
