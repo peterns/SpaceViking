@@ -189,8 +189,6 @@
 		AED3117315BF506C001C231B /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9A15BEBB120028C600 /* IntroLayer.m */; };
 		AED3117415BF506F001C231B /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9C15BEBB120028C600 /* IntroScene.m */; };
 		AED3117515BF50B4001C231B /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C5A15BE90BF0028C600 /* GameManager.m */; };
-		AED311AE15BF55EE001C231B /* VikingSpeechFont64.fnt in Resources */ = {isa = PBXBuildFile; fileRef = AED311AC15BF55EE001C231B /* VikingSpeechFont64.fnt */; };
-		AED311AF15BF55EE001C231B /* VikingSpeechFont64.png in Resources */ = {isa = PBXBuildFile; fileRef = AED311AD15BF55EE001C231B /* VikingSpeechFont64.png */; };
 		AEE76F4A159EEDB300D6FB14 /* GameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE76F49159EEDB300D6FB14 /* GameplayLayer.m */; };
 		AEE76F4E159EF0DF00D6FB14 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE76F4D159EF0DF00D6FB14 /* GameScene.m */; };
 		AEE76F5D159F0B1900D6FB14 /* ColoredCircleSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE76F51159F0B1900D6FB14 /* ColoredCircleSprite.m */; };
@@ -527,8 +525,6 @@
 		AE998473159DBD82005B458C /* sv_anim_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sv_anim_1.png; sourceTree = "<group>"; };
 		AEA13AEC159DE32F00A1B5DF /* BackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundLayer.h; sourceTree = "<group>"; };
 		AEA13AED159DE32F00A1B5DF /* BackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundLayer.m; sourceTree = "<group>"; };
-		AED311AC15BF55EE001C231B /* VikingSpeechFont64.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VikingSpeechFont64.fnt; sourceTree = "<group>"; };
-		AED311AD15BF55EE001C231B /* VikingSpeechFont64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VikingSpeechFont64.png; sourceTree = "<group>"; };
 		AEE76F48159EEDB300D6FB14 /* GameplayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayLayer.h; sourceTree = "<group>"; };
 		AEE76F49159EEDB300D6FB14 /* GameplayLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameplayLayer.m; sourceTree = "<group>"; };
 		AEE76F4C159EF0DF00D6FB14 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
@@ -1114,8 +1110,6 @@
 		AE998447159DBD81005B458C /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				AED311AB15BF55EE001C231B /* Fonts */,
-				AED311A615BF55DF001C231B /* Menus */,
 				29885F6B15BDDABC00F0B892 /* SpaceVikingFont.png */,
 				29885F6C15BDDABC00F0B892 /* SpaceVikingFont.fnt */,
 				AE37991D15A31446009BC993 /* an1_anim1.png */,
@@ -1230,54 +1224,6 @@
 				AE998472159DBD82005B458C /* jumpUp.png */,
 			);
 			path = Joystick;
-			sourceTree = "<group>";
-		};
-		AED311A615BF55DF001C231B /* Menus */ = {
-			isa = PBXGroup;
-			children = (
-				AED311A715BF55DF001C231B /* Credits */,
-				AED311A815BF55DF001C231B /* Intro */,
-				AED311A915BF55DF001C231B /* Level Complete */,
-				AED311AA15BF55DF001C231B /* Main */,
-			);
-			path = Menus;
-			sourceTree = "<group>";
-		};
-		AED311A715BF55DF001C231B /* Credits */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Credits;
-			sourceTree = "<group>";
-		};
-		AED311A815BF55DF001C231B /* Intro */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Intro;
-			sourceTree = "<group>";
-		};
-		AED311A915BF55DF001C231B /* Level Complete */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Level Complete";
-			sourceTree = "<group>";
-		};
-		AED311AA15BF55DF001C231B /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		AED311AB15BF55EE001C231B /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				AED311AC15BF55EE001C231B /* VikingSpeechFont64.fnt */,
-				AED311AD15BF55EE001C231B /* VikingSpeechFont64.png */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		AEE76F4F159F0B1900D6FB14 /* JoystickClasses */ = {
@@ -1408,8 +1354,6 @@
 				29DAA4B415B76703004BF9D8 /* PhaserBullet.plist in Resources */,
 				29885F6D15BDDABC00F0B892 /* SpaceVikingFont.png in Resources */,
 				29885F6E15BDDABC00F0B892 /* SpaceVikingFont.fnt in Resources */,
-				AED311AE15BF55EE001C231B /* VikingSpeechFont64.fnt in Resources */,
-				AED311AF15BF55EE001C231B /* VikingSpeechFont64.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
