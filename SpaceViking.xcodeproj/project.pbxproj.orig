@@ -34,6 +34,38 @@
 		AE37992415A31446009BC993 /* an1_anim4.png in Resources */ = {isa = PBXBuildFile; fileRef = AE37992015A31446009BC993 /* an1_anim4.png */; };
 		AE476E7F15A42CBA00EA5358 /* GameCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE476E7E15A42CBA00EA5358 /* GameCharacter.m */; };
 		AE476E8315A436D300EA5358 /* RadarDish.m in Sources */ = {isa = PBXBuildFile; fileRef = AE476E8215A436D300EA5358 /* RadarDish.m */; };
+		AE6E2C5B15BE90BF0028C600 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C5A15BE90BF0028C600 /* GameManager.m */; };
+		AE6E2C7B15BEA5210028C600 /* GenericMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6515BEA5210028C600 /* GenericMenuBackground.png */; };
+		AE6E2C7C15BEA5210028C600 /* intro1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6715BEA5210028C600 /* intro1.png */; };
+		AE6E2C7D15BEA5210028C600 /* intro2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6815BEA5210028C600 /* intro2.png */; };
+		AE6E2C7E15BEA5210028C600 /* intro3.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6915BEA5210028C600 /* intro3.png */; };
+		AE6E2C7F15BEA5210028C600 /* intro4.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6A15BEA5210028C600 /* intro4.png */; };
+		AE6E2C8015BEA5210028C600 /* intro5.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6B15BEA5210028C600 /* intro5.png */; };
+		AE6E2C8115BEA5210028C600 /* intro6.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6C15BEA5210028C600 /* intro6.png */; };
+		AE6E2C8215BEA5210028C600 /* intro7.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6D15BEA5210028C600 /* intro7.png */; };
+		AE6E2C8315BEA5210028C600 /* LevelCompleteAlive.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C6F15BEA5210028C600 /* LevelCompleteAlive.png */; };
+		AE6E2C8415BEA5210028C600 /* LevelCompleteDead.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7015BEA5210028C600 /* LevelCompleteDead.png */; };
+		AE6E2C8515BEA5210028C600 /* BuyBookButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7215BEA5210028C600 /* BuyBookButtonNormal.png */; };
+		AE6E2C8615BEA5210028C600 /* BuyBookButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7315BEA5210028C600 /* BuyBookButtonSelected.png */; };
+		AE6E2C8715BEA5210028C600 /* MainMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7415BEA5210028C600 /* MainMenuBackground.png */; };
+		AE6E2C8815BEA5210028C600 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7515BEA5210028C600 /* menu.png */; };
+		AE6E2C8915BEA5210028C600 /* OptionsButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7615BEA5210028C600 /* OptionsButtonNormal.png */; };
+		AE6E2C8A15BEA5210028C600 /* OptionsButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7715BEA5210028C600 /* OptionsButtonSelected.png */; };
+		AE6E2C8B15BEA5210028C600 /* PlayGameButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7815BEA5210028C600 /* PlayGameButtonNormal.png */; };
+		AE6E2C8C15BEA5210028C600 /* PlayGameButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7915BEA5210028C600 /* PlayGameButtonSelected.png */; };
+		AE6E2C8D15BEA5210028C600 /* VikingFloating.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C7A15BEA5210028C600 /* VikingFloating.png */; };
+		AE6E2C9115BEA5710028C600 /* VikingSpeechFont64.fnt in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C8F15BEA5710028C600 /* VikingSpeechFont64.fnt */; };
+		AE6E2C9215BEA5710028C600 /* VikingSpeechFont64.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6E2C9015BEA5710028C600 /* VikingSpeechFont64.png */; };
+		AE6E2C9515BEA64F0028C600 /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9415BEA64F0028C600 /* MainMenuScene.m */; };
+		AE6E2C9815BEA6820028C600 /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9715BEA6820028C600 /* MainMenuLayer.m */; };
+		AE6E2CA915BEBD420028C600 /* LevelCompleteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9E15BEBB2A0028C600 /* LevelCompleteLayer.m */; };
+		AE6E2CAA15BEBD450028C600 /* LevelCompleteScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA015BEBB2A0028C600 /* LevelCompleteScene.m */; };
+		AE6E2CAB15BEBD4A0028C600 /* CreditsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA215BEBB3E0028C600 /* CreditsLayer.m */; };
+		AE6E2CAC15BEBD4D0028C600 /* CreditsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA415BEBB3E0028C600 /* CreditsScene.m */; };
+		AE6E2CAD15BEBD510028C600 /* OptionsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA615BEBB510028C600 /* OptionsLayer.m */; };
+		AE6E2CAE15BEBD550028C600 /* OptionsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA815BEBB510028C600 /* OptionsScene.m */; };
+		AE6E2CAF15BEBD5C0028C600 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9A15BEBB120028C600 /* IntroLayer.m */; };
+		AE6E2CB015BEBD600028C600 /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9C15BEBB120028C600 /* IntroScene.m */; };
 		AE9982D7159DBB5D005B458C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9982D6159DBB5D005B458C /* QuartzCore.framework */; };
 		AE9982D9159DBB5D005B458C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9982D8159DBB5D005B458C /* OpenGLES.framework */; };
 		AE9982DB159DBB5D005B458C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9982DA159DBB5D005B458C /* OpenAL.framework */; };
@@ -178,19 +210,6 @@
 		AE998496159DBD82005B458C /* jumpUp.png in Resources */ = {isa = PBXBuildFile; fileRef = AE998472159DBD82005B458C /* jumpUp.png */; };
 		AE998497159DBD82005B458C /* sv_anim_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE998473159DBD82005B458C /* sv_anim_1.png */; };
 		AEA13AEE159DE32F00A1B5DF /* BackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA13AED159DE32F00A1B5DF /* BackgroundLayer.m */; };
-		AED3116A15BF5045001C231B /* LevelCompleteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9E15BEBB2A0028C600 /* LevelCompleteLayer.m */; };
-		AED3116C15BF5049001C231B /* LevelCompleteScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA015BEBB2A0028C600 /* LevelCompleteScene.m */; };
-		AED3116D15BF504E001C231B /* CreditsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA215BEBB3E0028C600 /* CreditsLayer.m */; };
-		AED3116E15BF5050001C231B /* CreditsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA415BEBB3E0028C600 /* CreditsScene.m */; };
-		AED3116F15BF5056001C231B /* OptionsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA615BEBB510028C600 /* OptionsLayer.m */; };
-		AED3117015BF5059001C231B /* OptionsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2CA815BEBB510028C600 /* OptionsScene.m */; };
-		AED3117115BF5063001C231B /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9415BEA64F0028C600 /* MainMenuScene.m */; };
-		AED3117215BF5066001C231B /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9715BEA6820028C600 /* MainMenuLayer.m */; };
-		AED3117315BF506C001C231B /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9A15BEBB120028C600 /* IntroLayer.m */; };
-		AED3117415BF506F001C231B /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C9C15BEBB120028C600 /* IntroScene.m */; };
-		AED3117515BF50B4001C231B /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E2C5A15BE90BF0028C600 /* GameManager.m */; };
-		AED311AE15BF55EE001C231B /* VikingSpeechFont64.fnt in Resources */ = {isa = PBXBuildFile; fileRef = AED311AC15BF55EE001C231B /* VikingSpeechFont64.fnt */; };
-		AED311AF15BF55EE001C231B /* VikingSpeechFont64.png in Resources */ = {isa = PBXBuildFile; fileRef = AED311AD15BF55EE001C231B /* VikingSpeechFont64.png */; };
 		AEE76F4A159EEDB300D6FB14 /* GameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE76F49159EEDB300D6FB14 /* GameplayLayer.m */; };
 		AEE76F4E159EF0DF00D6FB14 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE76F4D159EF0DF00D6FB14 /* GameScene.m */; };
 		AEE76F5D159F0B1900D6FB14 /* ColoredCircleSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE76F51159F0B1900D6FB14 /* ColoredCircleSprite.m */; };
@@ -243,6 +262,27 @@
 		AE476E8215A436D300EA5358 /* RadarDish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarDish.m; sourceTree = "<group>"; };
 		AE6E2C5915BE90BF0028C600 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
 		AE6E2C5A15BE90BF0028C600 /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
+		AE6E2C6515BEA5210028C600 /* GenericMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenericMenuBackground.png; sourceTree = "<group>"; };
+		AE6E2C6715BEA5210028C600 /* intro1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro1.png; sourceTree = "<group>"; };
+		AE6E2C6815BEA5210028C600 /* intro2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro2.png; sourceTree = "<group>"; };
+		AE6E2C6915BEA5210028C600 /* intro3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro3.png; sourceTree = "<group>"; };
+		AE6E2C6A15BEA5210028C600 /* intro4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro4.png; sourceTree = "<group>"; };
+		AE6E2C6B15BEA5210028C600 /* intro5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro5.png; sourceTree = "<group>"; };
+		AE6E2C6C15BEA5210028C600 /* intro6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro6.png; sourceTree = "<group>"; };
+		AE6E2C6D15BEA5210028C600 /* intro7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro7.png; sourceTree = "<group>"; };
+		AE6E2C6F15BEA5210028C600 /* LevelCompleteAlive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LevelCompleteAlive.png; sourceTree = "<group>"; };
+		AE6E2C7015BEA5210028C600 /* LevelCompleteDead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LevelCompleteDead.png; sourceTree = "<group>"; };
+		AE6E2C7215BEA5210028C600 /* BuyBookButtonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BuyBookButtonNormal.png; sourceTree = "<group>"; };
+		AE6E2C7315BEA5210028C600 /* BuyBookButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BuyBookButtonSelected.png; sourceTree = "<group>"; };
+		AE6E2C7415BEA5210028C600 /* MainMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainMenuBackground.png; sourceTree = "<group>"; };
+		AE6E2C7515BEA5210028C600 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		AE6E2C7615BEA5210028C600 /* OptionsButtonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OptionsButtonNormal.png; sourceTree = "<group>"; };
+		AE6E2C7715BEA5210028C600 /* OptionsButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OptionsButtonSelected.png; sourceTree = "<group>"; };
+		AE6E2C7815BEA5210028C600 /* PlayGameButtonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayGameButtonNormal.png; sourceTree = "<group>"; };
+		AE6E2C7915BEA5210028C600 /* PlayGameButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayGameButtonSelected.png; sourceTree = "<group>"; };
+		AE6E2C7A15BEA5210028C600 /* VikingFloating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VikingFloating.png; sourceTree = "<group>"; };
+		AE6E2C8F15BEA5710028C600 /* VikingSpeechFont64.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VikingSpeechFont64.fnt; sourceTree = "<group>"; };
+		AE6E2C9015BEA5710028C600 /* VikingSpeechFont64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VikingSpeechFont64.png; sourceTree = "<group>"; };
 		AE6E2C9315BEA64F0028C600 /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
 		AE6E2C9415BEA64F0028C600 /* MainMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuScene.m; sourceTree = "<group>"; };
 		AE6E2C9615BEA6820028C600 /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
@@ -527,8 +567,6 @@
 		AE998473159DBD82005B458C /* sv_anim_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sv_anim_1.png; sourceTree = "<group>"; };
 		AEA13AEC159DE32F00A1B5DF /* BackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundLayer.h; sourceTree = "<group>"; };
 		AEA13AED159DE32F00A1B5DF /* BackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundLayer.m; sourceTree = "<group>"; };
-		AED311AC15BF55EE001C231B /* VikingSpeechFont64.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VikingSpeechFont64.fnt; sourceTree = "<group>"; };
-		AED311AD15BF55EE001C231B /* VikingSpeechFont64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VikingSpeechFont64.png; sourceTree = "<group>"; };
 		AEE76F48159EEDB300D6FB14 /* GameplayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayLayer.h; sourceTree = "<group>"; };
 		AEE76F49159EEDB300D6FB14 /* GameplayLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameplayLayer.m; sourceTree = "<group>"; };
 		AEE76F4C159EF0DF00D6FB14 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
@@ -742,6 +780,73 @@
 				AEE76F4D159EF0DF00D6FB14 /* GameScene.m */,
 			);
 			name = Scene1;
+			sourceTree = "<group>";
+		};
+		AE6E2C6315BEA5210028C600 /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				AE6E2C6415BEA5210028C600 /* Credits */,
+				AE6E2C6615BEA5210028C600 /* Intro */,
+				AE6E2C6E15BEA5210028C600 /* Level Complete */,
+				AE6E2C7115BEA5210028C600 /* Main */,
+			);
+			path = Menus;
+			sourceTree = "<group>";
+		};
+		AE6E2C6415BEA5210028C600 /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				AE6E2C6515BEA5210028C600 /* GenericMenuBackground.png */,
+			);
+			path = Credits;
+			sourceTree = "<group>";
+		};
+		AE6E2C6615BEA5210028C600 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				AE6E2C6715BEA5210028C600 /* intro1.png */,
+				AE6E2C6815BEA5210028C600 /* intro2.png */,
+				AE6E2C6915BEA5210028C600 /* intro3.png */,
+				AE6E2C6A15BEA5210028C600 /* intro4.png */,
+				AE6E2C6B15BEA5210028C600 /* intro5.png */,
+				AE6E2C6C15BEA5210028C600 /* intro6.png */,
+				AE6E2C6D15BEA5210028C600 /* intro7.png */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		AE6E2C6E15BEA5210028C600 /* Level Complete */ = {
+			isa = PBXGroup;
+			children = (
+				AE6E2C6F15BEA5210028C600 /* LevelCompleteAlive.png */,
+				AE6E2C7015BEA5210028C600 /* LevelCompleteDead.png */,
+			);
+			path = "Level Complete";
+			sourceTree = "<group>";
+		};
+		AE6E2C7115BEA5210028C600 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AE6E2C7215BEA5210028C600 /* BuyBookButtonNormal.png */,
+				AE6E2C7315BEA5210028C600 /* BuyBookButtonSelected.png */,
+				AE6E2C7415BEA5210028C600 /* MainMenuBackground.png */,
+				AE6E2C7515BEA5210028C600 /* menu.png */,
+				AE6E2C7615BEA5210028C600 /* OptionsButtonNormal.png */,
+				AE6E2C7715BEA5210028C600 /* OptionsButtonSelected.png */,
+				AE6E2C7815BEA5210028C600 /* PlayGameButtonNormal.png */,
+				AE6E2C7915BEA5210028C600 /* PlayGameButtonSelected.png */,
+				AE6E2C7A15BEA5210028C600 /* VikingFloating.png */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AE6E2C8E15BEA5710028C600 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AE6E2C8F15BEA5710028C600 /* VikingSpeechFont64.fnt */,
+				AE6E2C9015BEA5710028C600 /* VikingSpeechFont64.png */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		AE9982C7159DBB5C005B458C = {
@@ -1114,10 +1219,13 @@
 		AE998447159DBD81005B458C /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				AED311AB15BF55EE001C231B /* Fonts */,
-				AED311A615BF55DF001C231B /* Menus */,
+<<<<<<< HEAD
+				AE6E2C8E15BEA5710028C600 /* Fonts */,
+				AE6E2C6315BEA5210028C600 /* Menus */,
+=======
 				29885F6B15BDDABC00F0B892 /* SpaceVikingFont.png */,
 				29885F6C15BDDABC00F0B892 /* SpaceVikingFont.fnt */,
+>>>>>>> 9522a591d37b14b315a97d8b7e17fdbbb65c898b
 				AE37991D15A31446009BC993 /* an1_anim1.png */,
 				AE37991E15A31446009BC993 /* an1_anim2.png */,
 				AE37991F15A31446009BC993 /* an1_anim3.png */,
@@ -1230,54 +1338,6 @@
 				AE998472159DBD82005B458C /* jumpUp.png */,
 			);
 			path = Joystick;
-			sourceTree = "<group>";
-		};
-		AED311A615BF55DF001C231B /* Menus */ = {
-			isa = PBXGroup;
-			children = (
-				AED311A715BF55DF001C231B /* Credits */,
-				AED311A815BF55DF001C231B /* Intro */,
-				AED311A915BF55DF001C231B /* Level Complete */,
-				AED311AA15BF55DF001C231B /* Main */,
-			);
-			path = Menus;
-			sourceTree = "<group>";
-		};
-		AED311A715BF55DF001C231B /* Credits */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Credits;
-			sourceTree = "<group>";
-		};
-		AED311A815BF55DF001C231B /* Intro */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Intro;
-			sourceTree = "<group>";
-		};
-		AED311A915BF55DF001C231B /* Level Complete */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Level Complete";
-			sourceTree = "<group>";
-		};
-		AED311AA15BF55DF001C231B /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		AED311AB15BF55EE001C231B /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				AED311AC15BF55EE001C231B /* VikingSpeechFont64.fnt */,
-				AED311AD15BF55EE001C231B /* VikingSpeechFont64.png */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		AEE76F4F159F0B1900D6FB14 /* JoystickClasses */ = {
@@ -1405,11 +1465,33 @@
 				29EB77A315A392C700E570D1 /* Health.plist in Resources */,
 				29EB77A415A392C700E570D1 /* Mallet.plist in Resources */,
 				29EB77A515A392C700E570D1 /* Viking.plist in Resources */,
+<<<<<<< HEAD
+				AE6E2C7B15BEA5210028C600 /* GenericMenuBackground.png in Resources */,
+				AE6E2C7C15BEA5210028C600 /* intro1.png in Resources */,
+				AE6E2C7D15BEA5210028C600 /* intro2.png in Resources */,
+				AE6E2C7E15BEA5210028C600 /* intro3.png in Resources */,
+				AE6E2C7F15BEA5210028C600 /* intro4.png in Resources */,
+				AE6E2C8015BEA5210028C600 /* intro5.png in Resources */,
+				AE6E2C8115BEA5210028C600 /* intro6.png in Resources */,
+				AE6E2C8215BEA5210028C600 /* intro7.png in Resources */,
+				AE6E2C8315BEA5210028C600 /* LevelCompleteAlive.png in Resources */,
+				AE6E2C8415BEA5210028C600 /* LevelCompleteDead.png in Resources */,
+				AE6E2C8515BEA5210028C600 /* BuyBookButtonNormal.png in Resources */,
+				AE6E2C8615BEA5210028C600 /* BuyBookButtonSelected.png in Resources */,
+				AE6E2C8715BEA5210028C600 /* MainMenuBackground.png in Resources */,
+				AE6E2C8815BEA5210028C600 /* menu.png in Resources */,
+				AE6E2C8915BEA5210028C600 /* OptionsButtonNormal.png in Resources */,
+				AE6E2C8A15BEA5210028C600 /* OptionsButtonSelected.png in Resources */,
+				AE6E2C8B15BEA5210028C600 /* PlayGameButtonNormal.png in Resources */,
+				AE6E2C8C15BEA5210028C600 /* PlayGameButtonSelected.png in Resources */,
+				AE6E2C8D15BEA5210028C600 /* VikingFloating.png in Resources */,
+				AE6E2C9115BEA5710028C600 /* VikingSpeechFont64.fnt in Resources */,
+				AE6E2C9215BEA5710028C600 /* VikingSpeechFont64.png in Resources */,
+=======
 				29DAA4B415B76703004BF9D8 /* PhaserBullet.plist in Resources */,
 				29885F6D15BDDABC00F0B892 /* SpaceVikingFont.png in Resources */,
 				29885F6E15BDDABC00F0B892 /* SpaceVikingFont.fnt in Resources */,
-				AED311AE15BF55EE001C231B /* VikingSpeechFont64.fnt in Resources */,
-				AED311AF15BF55EE001C231B /* VikingSpeechFont64.png in Resources */,
+>>>>>>> 9522a591d37b14b315a97d8b7e17fdbbb65c898b
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1530,22 +1612,25 @@
 				AE476E7F15A42CBA00EA5358 /* GameCharacter.m in Sources */,
 				AE476E8315A436D300EA5358 /* RadarDish.m in Sources */,
 				AE19E4E715A47618008D81E1 /* Viking.m in Sources */,
+<<<<<<< HEAD
+				AE6E2C5B15BE90BF0028C600 /* GameManager.m in Sources */,
+				AE6E2C9515BEA64F0028C600 /* MainMenuScene.m in Sources */,
+				AE6E2C9815BEA6820028C600 /* MainMenuLayer.m in Sources */,
+				AE6E2CA915BEBD420028C600 /* LevelCompleteLayer.m in Sources */,
+				AE6E2CAA15BEBD450028C600 /* LevelCompleteScene.m in Sources */,
+				AE6E2CAB15BEBD4A0028C600 /* CreditsLayer.m in Sources */,
+				AE6E2CAC15BEBD4D0028C600 /* CreditsScene.m in Sources */,
+				AE6E2CAD15BEBD510028C600 /* OptionsLayer.m in Sources */,
+				AE6E2CAE15BEBD550028C600 /* OptionsScene.m in Sources */,
+				AE6E2CAF15BEBD5C0028C600 /* IntroLayer.m in Sources */,
+				AE6E2CB015BEBD600028C600 /* IntroScene.m in Sources */,
+=======
 				293CF45215AB7CDE00B9CC4A /* Mallet.m in Sources */,
 				293CF45615ACC81400B9CC4A /* Health.m in Sources */,
 				293CF45C15ACCC4000B9CC4A /* SpaceCargoShip.m in Sources */,
 				29DAA4B115B74CD3004BF9D8 /* EnemyRobot.m in Sources */,
 				29DAA4B715B7684E004BF9D8 /* PhaserBullet.m in Sources */,
-				AED3116A15BF5045001C231B /* LevelCompleteLayer.m in Sources */,
-				AED3116C15BF5049001C231B /* LevelCompleteScene.m in Sources */,
-				AED3116D15BF504E001C231B /* CreditsLayer.m in Sources */,
-				AED3116E15BF5050001C231B /* CreditsScene.m in Sources */,
-				AED3116F15BF5056001C231B /* OptionsLayer.m in Sources */,
-				AED3117015BF5059001C231B /* OptionsScene.m in Sources */,
-				AED3117115BF5063001C231B /* MainMenuScene.m in Sources */,
-				AED3117215BF5066001C231B /* MainMenuLayer.m in Sources */,
-				AED3117315BF506C001C231B /* IntroLayer.m in Sources */,
-				AED3117415BF506F001C231B /* IntroScene.m in Sources */,
-				AED3117515BF50B4001C231B /* GameManager.m in Sources */,
+>>>>>>> 9522a591d37b14b315a97d8b7e17fdbbb65c898b
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
