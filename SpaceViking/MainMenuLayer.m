@@ -87,7 +87,7 @@
     CCMenuItemLabel *playScene2 = [CCMenuItemLabel itemWithLabel:playScene2Label target:self selector:@selector(playScene:)];
     [playScene2 setTag:2];
     
-    CCLabelBMFont *playScene3Label = [CCLabelBMFont labelWithString:@"Descent Into Hades" fntFile:@"VikingSpeechFont64.fnt"];
+    CCLabelBMFont *playScene3Label = [CCLabelBMFont labelWithString:@"Mad Dreams of the Dead" fntFile:@"VikingSpeechFont64.fnt"];
     CCMenuItemLabel *playScene3 = [CCMenuItemLabel itemWithLabel:playScene3Label target:self selector:@selector(playScene:)];
     [playScene3 setTag:3];
     

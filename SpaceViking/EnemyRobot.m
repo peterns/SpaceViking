@@ -24,7 +24,7 @@
 {
     delegate = nil;
     
-    [myDebugLabel removeFromParentAndCleanup:YES];
+    //[myDebugLabel removeFromParentAndCleanup:YES];
     myDebugLabel = nil;
     
     [robotWalkingAnim release];

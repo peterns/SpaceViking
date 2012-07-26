@@ -215,6 +215,25 @@
     }
 }
 
+/*
+ // audio shouldn't be handled here - just for small presentation purposes
+-(void) loadAudio {
+    // Loading Sounds Synchronously
+    [CDSoundEngine setMixerSampleRate:CD_SAMPLE_RATE_MID];
+    
+    [[CDAudioManager sharedManager] setResignBehavior:kAMRBStopPlay autoHandle:YES];
+    
+    soundEngine = [SimpleAudioEngine sharedEngine];
+    
+    [soundEngine preloadBackgroundMusic:BACKGROUND_TRACK_OLE_AWAKES];
+    
+    [soundEngine playBackgroundMusic:BACKGROUND_TRACK_OLE_AWAKES];
+    
+    [soundEngine preloadEffect:@"22k_viking_cursingV1.wav"];
+    [soundEngine playEffect:@"22k_viking_cursingV1.wav"];
+    
+}
+*/
 
 
 -(id) init
@@ -223,6 +242,8 @@
     
     if(self != nil)
     {
+        //[self loadAudio]; // audio should be handled in the GameManager
+        
         CGSize screenSize = [CCDirector sharedDirector].winSize;
         
         // enable touches

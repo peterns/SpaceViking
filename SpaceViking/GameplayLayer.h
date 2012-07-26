@@ -22,6 +22,7 @@
 #import "EnemyRobot.h"
 #import "PhaserBullet.h"
 #import "GameManager.h"
+#import "SimpleAudioEngine.h"
 
 @interface GameplayLayer : CCLayer <GameplayLayerDelegate>
 {
@@ -30,5 +31,6 @@
     SneakyButton *jumpButton;
     SneakyButton *attackButton;
     CCSpriteBatchNode *sceneSpriteBatchNode;
+    SimpleAudioEngine *soundEngine;
 }
 @end
