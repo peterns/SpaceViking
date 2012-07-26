@@ -15,7 +15,6 @@
 #import "LevelCompleteScene.h"
 
 
-
 @implementation GameManager
 
 static GameManager* _sharedGameManager = nil;
@@ -23,7 +22,12 @@ static GameManager* _sharedGameManager = nil;
 @synthesize isMusicON;
 @synthesize isSoundEffectsON;
 @synthesize hasPlayerDied;
+@synthesize managerSoundState;
+@synthesize listOfSoundEffectFiles;
+@synthesize soundEffectsState;
 
+#pragma mark -
+#pragma mark Singleton
 +(GameManager*) sharedGameManager {
     @synchronized([GameManager class])
     {
@@ -36,6 +40,7 @@ static GameManager* _sharedGameManager = nil;
     return nil;
 }
 
+#pragma mark - Init and Alloc
 +(id) alloc
 {
     @synchronized ([GameManager class])
@@ -57,11 +62,17 @@ static GameManager* _sharedGameManager = nil;
         isSoundEffectsON = YES;
         hasPlayerDied = NO;
         currentScene = kNoSceneUninitialized;
+        
+        // audio
+        hasAudioBeenInitialized = NO;
+        soundEngine = nil;
+        managerSoundState = kAudioManagerUninitialized;
     }
     
     return self;
 }
 
+#pragma mark - Scene and site links
 
 -(void) runSceneWithID:(SceneTypes)sceneID {
 
@@ -180,8 +191,149 @@ static GameManager* _sharedGameManager = nil;
         CCLOG(@"%@%@", @"Failed to open url:", [urlToOpen description]);
         [self runSceneWithID:kMainMenuScene];
     }
+}
 
+#pragma mark - Audio
 
+-(NSString *) formatSceneTypeToString:(SceneTypes)sceneID {
+    NSString *result;
+    switch (sceneID) {
+        case kNoSceneUninitialized:
+            result = @"kNoSceneUninitialized";
+            break;
+            
+        case kMainMenuScene:
+            result = @"kMainMenuScene";
+            break;
+            
+        case kOptionsScene:
+            result = @"kOptionsScene";
+            break;
+            
+        case kCreditsScene:
+            result = @"kCreditsScene";
+            break;
+            
+        case kIntroScene:
+            result = @"kIntroScene";
+            break;
+            
+        case kLevelCompleteScene:
+            result = @"kLevelCompleteScene";
+            break;
+            
+        case kGameLevel1:
+            result = @"kGameLevel1";
+            break;
+            
+        case kGameLevel2:
+            result = @"kGameLevel2";
+            break;
+            
+        case kGameLevel3:
+            result = @"kGameLevel3";
+            break;
+            
+        case kGameLevel4:
+            result = @"kGameLevel4";
+            break;
+            
+        case kGameLevel5:
+            result = @"kGameLevel5";
+            break;
+            
+        case kCutSceneForLevel2:
+            result = @"kCutSceneForLevel2";
+            break;
+            
+        default:
+            [NSException raise:NSGenericException format:@"Unexpected SceneType"];
+    }
+    
+    return  result;
+}
+
+-(NSDictionary *) getSoundEffectsListForSceneWithID:(SceneTypes) sceneID {
+    NSString *fullFileName = @"SoundEffects.plist";
+    NSString *plistPath;
+    
+    // get the path to the plist
+    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    plistPath = [rootPath stringByAppendingPathComponent:fullFileName];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
+        plistPath = [[NSBundle mainBundle] pathForResource:@"SoundEffects" ofType:@"plist"];
+    }
+    
+    // read in the plist file
+    NSDictionary *plistDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    
+    // if the plistDictionary is null, the file was not found
+    if (!plistDictionary) {
+        CCLOG(@"Error reading SoundEffects.plist");
+        return nil; // No Plist Dictionary or file found
+    }
+    
+    
+    // if the list of sound effects files is empty, load it
+    if (!listOfSoundEffectFiles || ([listOfSoundEffectFiles count] < 1)) {
+        NSLog(@"Before");
+        [self setListOfSoundEffectFiles:[[NSMutableDictionary alloc] init]];
+        NSLog(@"After");
+        
+        for (NSString* sceneSoundDictionary in plistDictionary) {
+            [listOfSoundEffectFiles addEntriesFromDictionary:[plistDictionary objectForKey:sceneSoundDictionary]];
+        }
+        
+        CCLOG(@"Number of SFX filenames: %d", [listOfSoundEffectFiles count]);
+    }
+    
+}
+
+-(void) initAudioAsync
+{
+    // Initializes the audio engine asynchronously
+    managerSoundState = kAudioManagerInitializing;
+    // Inidicate that we are trying to start up the Audio Manager
+    [CDSoundEngine setMixerSampleRate:CD_SAMPLE_RATE_MID];
+    
+    // Init audio manager assynchrounously as it can take a few seconds
+    // The FXPlusMusicIfNoOtherAudio mode will check if the user is
+    // playing music and disable backgound music playback if
+    // that is the case
+    [CDAudioManager initAsynchronously:kAMM_FxPlusMusicIfNoOtherAudio];
+    
+    // Wait for the audio manager to initialize
+    while ([CDAudioManager sharedManagerState] != kAMStateInitialised) {
+        [NSThread sleepForTimeInterval:0.1];
+    }
+    
+    // At this point the CocosDneshion should be initialized
+    // Grab the CDAudioManager and check the state
+    CDAudioManager *audioManager = [CDAudioManager sharedManager];
+    if (audioManager.soundEngine == nil || audioManager.soundEngine.functioning == NO) {
+        CCLOG(@"CocosDenschion failed to init, no audio will play.");
+        managerSoundState = kAudioManagerFailed;
+    } else {
+        [audioManager setResignBehavior:kAMRBStopPlay autoHandle:YES];
+        soundEngine = [SimpleAudioEngine sharedEngine];
+        managerSoundState = kAudioManagerReady;
+        CCLOG(@"CocosDenschion is Ready");
+    }
+}
+
+-(void) setupAudioEngine
+{
+    if (hasAudioBeenInitialized) {
+        return;
+    } else {
+        hasAudioBeenInitialized = YES;
+        NSOperationQueue *queue = [[NSOperationQueue new] autorelease];
+        NSInvocationOperation *asyncSetupOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(initAudioAsync) object:nil];
+        
+        [queue addOperation:asyncSetupOperation];
+        [asyncSetupOperation autorelease];
+    }
 }
 
 
