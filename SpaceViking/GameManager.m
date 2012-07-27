@@ -137,6 +137,10 @@ static GameManager* _sharedGameManager = nil;
         return;
     }
     
+    // Load audio for new scene based on sceneID
+    [self performSelectorInBackground:@selector(loadAudioForSceneWithID:) withObject:[NSNumber numberWithInt:currentScene]];
+    
+    
     // Menu Scenes have a value of < 100
     
     if (sceneID < 100) {
@@ -161,6 +165,11 @@ static GameManager* _sharedGameManager = nil;
     } else {
         [[CCDirector sharedDirector] replaceScene:sceneToRun];
     }
+    
+    
+    [self performSelectorInBackground:@selector(unloadAudioForSceneWithID:) withObject:[NSNumber numberWithInt:oldScene]];
+    
+    currentScene = oldScene;
     
 }
 
@@ -194,6 +203,60 @@ static GameManager* _sharedGameManager = nil;
 }
 
 #pragma mark - Audio
+
+-(void) playBackgroundTrack:(NSString *)trackFileName {
+    
+    // Wait to make sure soundEngine is initialized
+    if ((managerSoundState != kAudioManagerReady) && (managerSoundState != kAudioManagerFailed)) {
+        int waitCycles = 0;
+        
+        while (waitCycles < AUDIO_MAX_WAITTIME) {
+            [NSThread sleepForTimeInterval:0.1f];
+            
+            if ((managerSoundState == kAudioManagerReady) || (managerSoundState == kAudioManagerFailed)) {
+                break;
+            }
+            
+            waitCycles++;
+        }
+    }
+    
+    if (managerSoundState == kAudioManagerReady) {
+        if ([soundEngine isBackgroundMusicPlaying]) {
+            [soundEngine stopBackgroundMusic];
+        }
+        
+        [soundEngine preloadBackgroundMusic:trackFileName];
+        [soundEngine playBackgroundMusic:trackFileName loop:YES];
+        
+    }
+    
+}
+
+-(void) stopSoundEffect:(ALuint)soundEffectID
+{
+    if (managerSoundState == kAudioManagerReady) {
+        [soundEngine stopEffect:soundEffectID];
+    }
+}
+
+-(ALuint) playSoundEffect:(NSString *)soundEffectKey
+{
+    ALuint soundID = 0;
+    if (managerSoundState == kAudioManagerReady) {
+        NSNumber *isSFXLoaded = [soundEffectsState objectForKey:soundEffectKey];
+        if ([isSFXLoaded boolValue] == SFX_LOADED) {
+            soundID = [soundEngine playEffect:[listOfSoundEffectFiles objectForKey:soundEffectKey]];
+        } else {
+            CCLOG(@"GameMgr: SoundEffect %@ is not loaded.", soundEffectKey);
+        }
+    } else {
+        CCLOG(@"GameMgr: Sound Manager is not ready, cannot play %@", soundEffectKey);
+    }
+    
+    return soundID;
+}
+
 
 -(NSString *) formatSceneTypeToString:(SceneTypes)sceneID {
     NSString *result;
@@ -288,6 +351,21 @@ static GameManager* _sharedGameManager = nil;
         CCLOG(@"Number of SFX filenames: %d", [listOfSoundEffectFiles count]);
     }
     
+    // load the list of sound effects state, mark them as unloaded
+    if ((soundEffectsState == nil) || ([soundEffectsState count] < 1)){
+        [self setSoundEffectsState:[[NSMutableDictionary alloc] init]];
+        
+        for (NSString *soundEffectKey in listOfSoundEffectFiles) {
+            [soundEffectsState setObject:[NSNumber numberWithBool:SFX_NOTLOADED] forKey:soundEffectKey];
+        }
+    }
+    
+    // return just the mini SFX list for this scene
+    NSString *sceneIDName = [self formatSceneTypeToString:sceneID];
+    NSDictionary *soundEffectsList = [plistDictionary objectForKey:sceneIDName];
+    
+    return soundEffectsList;
+    
 }
 
 -(void) initAudioAsync
@@ -334,6 +412,73 @@ static GameManager* _sharedGameManager = nil;
         [queue addOperation:asyncSetupOperation];
         [asyncSetupOperation autorelease];
     }
+}
+
+-(void) loadAudioForSceneWithID:(NSNumber *) sceneIDNumber {
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    
+    SceneTypes sceneID = (SceneTypes) [sceneIDNumber intValue];
+    
+    if (managerSoundState == kAudioManagerInitializing) {
+        int waitCycles = 0;
+        while (waitCycles < AUDIO_MAX_WAITTIME) {
+            [NSThread sleepForTimeInterval:0.1f];
+            if ((managerSoundState == kAudioManagerReady) || (managerSoundState == kAudioManagerFailed)) {
+                break;
+            }
+            
+            waitCycles = waitCycles + 1;
+        }
+    }
+    
+    if (managerSoundState == kAudioManagerFailed) {
+        return; // Nothing to load, CocosDenshion not ready
+    }
+    
+    NSDictionary *soundEffectsToLoad = [self getSoundEffectsListForSceneWithID:sceneID];
+    
+    if (soundEffectsToLoad == nil) {
+        CCLOG(@"Error reading SoundEffects.plist");
+        return;
+    }
+    
+    // Get all of the entries and PreLoad
+    for (NSString *keyString in soundEffectsToLoad) {
+        CCLOG(@"\nLoading Audio Key:%@ File:%@", keyString, [soundEffectsToLoad objectForKey:keyString]);
+        
+        [soundEngine preloadEffect:[soundEffectsToLoad objectForKey:keyString]];
+        
+        [soundEffectsState setObject:[NSNumber numberWithBool:SFX_LOADED] forKey:keyString];
+    }
+    
+    [pool release];
+}
+
+-(void) unloadAudioForSceneWithID:(NSNumber*)sceneIDNumber {
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    SceneTypes sceneID = (SceneTypes)[sceneIDNumber intValue];
+    
+    if (sceneID == kNoSceneUninitialized) {
+        return; // Nothing to unload
+    }
+    
+    NSDictionary *soundEffectsToUnload = [self getSoundEffectsListForSceneWithID:sceneID];
+    
+    if (soundEffectsToUnload == nil) {
+        CCLOG(@"Error reading SoundEffects.plist");
+        return;
+    }
+    
+    if (managerSoundState == kAudioManagerReady) {
+        // Get all of the entries and unload
+        for (NSString *keyString in soundEffectsToUnload) {
+            [soundEffectsState setObject:[NSNumber numberWithBool:SFX_NOTLOADED] forKey:keyString];
+            [soundEngine unloadEffect:keyString];
+            CCLOG(@"\nUnloading Audio Key: %@ File: %@", keyString, [soundEffectsToUnload objectForKey:keyString]);
+        }
+    }
+    
+    [pool release];
 }
 
 

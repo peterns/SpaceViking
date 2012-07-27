@@ -49,6 +49,8 @@ typedef enum {
 // 0 for OFF, 1 for ON
 #define ENEMY_STATE_DEBUG 0
 
+#define AUDIO_MAX_WAITTIME 150
+
 typedef enum {
     kAudioManagerUninitialized = 0,
     kAudioManagerFailed = 1,
