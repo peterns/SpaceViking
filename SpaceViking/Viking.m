@@ -142,12 +142,127 @@
 }
 
 #pragma mark -
+#pragma mark SoundEffectsMethods
+-(void) playJumpingSound {
+    int soundToPlay = random() % 4;
+    if (soundToPlay == 0) {
+        PLAYSOUNDEFFECT(VIKING_JUMPING_1);
+    } else if (soundToPlay == 1) {
+        PLAYSOUNDEFFECT(VIKING_JUMPING_2);
+    } else if (soundToPlay == 2) {
+        PLAYSOUNDEFFECT(VIKING_JUMPING_3);
+    } else {
+        PLAYSOUNDEFFECT(VIKING_JUMPING_4);
+    }
+}
+
+-(void) playSwingingSound {
+    int soundToPlay = random() % 8;
+    
+    switch (soundToPlay) {
+        case 0:
+            PLAYSOUNDEFFECT(VIKING_SWINGING_1);
+            break;
+        case 1:
+            PLAYSOUNDEFFECT(VIKING_SWINGING_2);
+            break;
+        case 2:
+            PLAYSOUNDEFFECT(VIKING_SWINGING_3);
+            break;
+        case 3:
+            PLAYSOUNDEFFECT(VIKING_SWINGING_4);
+            break;
+        case 4:
+            PLAYSOUNDEFFECT(VIKING_SWINGING_5);
+            break;
+        case 5:
+            PLAYSOUNDEFFECT(VIKING_SWINGING_6);
+            break;
+        case 6:
+            PLAYSOUNDEFFECT(VIKING_SWINGING_7);
+            break;
+        case 7:
+            PLAYSOUNDEFFECT(VIKING_SWINGING_8);
+            break;
+            
+        default:
+            PLAYSOUNDEFFECT(VIKING_SWINGING_9);
+            break;
+    }
+}
+
+-(void) playBreathingSound {
+    int soundToPlay = random() % 4;
+    switch (soundToPlay) {
+        case 0:
+            PLAYSOUNDEFFECT(VIKING_GRUMBLING_1);
+            break;
+        case 1:
+            PLAYSOUNDEFFECT(VIKING_GRUMBLING_2);
+            break;
+        case 2:
+            PLAYSOUNDEFFECT(VIKING_CURSING_1);
+            break;
+        default:
+            PLAYSOUNDEFFECT(VIKING_CURSING_2);
+            break;
+    }
+}
+
+-(void) playTakingDamageSound {
+    int soundToPlay = random() % 5;
+    if (soundToPlay == 0) {
+        PLAYSOUNDEFFECT(VIKING_HIT_1);
+    } else if(soundToPlay == 1) {
+        PLAYSOUNDEFFECT(VIKING_HIT_2);
+    } else if (soundToPlay == 2) {
+        PLAYSOUNDEFFECT(VIKING_HIT_3);
+    } else if (soundToPlay == 3) {
+        PLAYSOUNDEFFECT(VIKING_HIT_4);
+    } else {
+        PLAYSOUNDEFFECT(VIKING_HIT_5);
+    }
+}
+
+-(void) playDyingSound {
+    int soundToPlay = random() % 5;
+    if (soundToPlay == 0) {
+        PLAYSOUNDEFFECT(VIKING_DYING_1);
+    } else if (soundToPlay == 1) {
+        PLAYSOUNDEFFECT(VIKING_DYING_2);
+    } else if (soundToPlay == 2) {
+        PLAYSOUNDEFFECT(VIKING_DYING_3);
+    } else if (soundToPlay == 3) {
+        PLAYSOUNDEFFECT(VIKING_DYING_4);
+    } else {
+        PLAYSOUNDEFFECT(VIKING_DYING_5);
+    }
+}
+
+-(void) playCrouchingSound {
+    int soundToPlay = random() % 4;
+    if (soundToPlay == 0) {
+        PLAYSOUNDEFFECT(VIKING_CROUCHING_1);
+    } else if (soundToPlay == 1) {
+        PLAYSOUNDEFFECT(VIKING_CROUCHING_2);
+    } else if (soundToPlay == 2) {
+        PLAYSOUNDEFFECT(VIKING_CROUCHING_3);
+    } else {
+        PLAYSOUNDEFFECT(VIKING_CROUCHING_4);
+    }
+}
+
+
+#pragma mark -
 -(void) changeState:(CharacterStates)newState
 {
     [self stopAllActions];
     id action = nil;
     id movementAction = nil;
     CGPoint newPosition;
+    
+    STOPSOUNDEFFECT(walkingSound);
+    
     [self setCharacterState:newState];
     
     switch (newState) {
@@ -161,6 +276,7 @@
             break;
             
         case kStateWalking:
+            walkingSound = PLAYSOUNDEFFECT(VIKING_WALKING_1);
             if (isCarryingMallet) {
                 action = [CCAnimate actionWithAnimation:walkingMalletAnim restoreOriginalFrame:NO];
             }
@@ -170,6 +286,8 @@
             break;
             
         case kStateCrouching:
+            [self playCrouchingSound];
+            
             if (isCarryingMallet) {
                 action = [CCAnimate actionWithAnimation:crouchingMalletAnim restoreOriginalFrame:NO];
             }
@@ -188,6 +306,8 @@
             break;
             
         case kStateBreating:
+            [self playBreathingSound];
+            
             if (isCarryingMallet) {
                 action = [CCAnimate actionWithAnimation:breathingMalletAnim restoreOriginalFrame:YES];
             }
@@ -197,6 +317,8 @@
             break;
             
         case kStateJumping:
+            [self playJumpingSound];
+            
             newPosition = ccp(screenSize.width * 0.2f, 0.0f);
             if ([self flipX] == YES) {
                 newPosition = ccp(newPosition.x * -1.0f, 0.0f);
@@ -232,8 +354,10 @@
         case kStateAttacking:
             if (isCarryingMallet == YES) {
                 action = [CCAnimate actionWithAnimation:malletPunchAnim restoreOriginalFrame:YES];
+                [self playSwingingSound];
             }
             else {
+                PLAYSOUNDEFFECT(VIKING_PUNCHING);
                 if (kLeftHook == myLastPunch) {
                     // Execute a right hook
                     myLastPunch = kRightHook;
@@ -249,6 +373,7 @@
             break;
             
         case kStateTakingDamage:
+            [self playTakingDamageSound];
             self.characterHealth = self.characterHealth - 10.0f;
             
             action = [CCAnimate actionWithAnimation:phaserShockAnim restoreOriginalFrame:YES];
@@ -256,6 +381,7 @@
             break;
             
         case kStateDead:
+            [self playDyingSound];
             action = [CCAnimate actionWithAnimation:deathAnim restoreOriginalFrame:NO];
             
             break;

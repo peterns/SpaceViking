@@ -50,6 +50,7 @@ typedef enum {
     SneakyJoystick *joystick;
     SneakyButton *jumpButton;
     SneakyButton *attackButton;
+    ALuint walkingSound;
     
     float millisecondsStayingIdle;
 }
