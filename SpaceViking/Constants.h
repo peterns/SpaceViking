@@ -66,10 +66,10 @@ typedef enum {
 #define SFX_LOADED YES
 
 #define PLAYSOUNDEFFECT(...) \
-[[GameManager sharedGameManager] playSoundEffect:@#__VA_ARGS__ ]]
+[[GameManager sharedGameManager] playSoundEffect:@#__VA_ARGS__ ]
 
 #define STOPSOUNDEFFECT(...) \
-[[GameManager sharedGameManager] stopSoundEffect:@#__VA_ARGS__ ]]
+[[GameManager sharedGameManager] stopSoundEffect:@#__VA_ARGS__ ]
 
 
 // Background Music

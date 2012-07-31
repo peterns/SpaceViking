@@ -311,6 +311,7 @@ static GameManager* _sharedGameManager = nil;
             
         default:
             [NSException raise:NSGenericException format:@"Unexpected SceneType"];
+            break;
     }
     
     return  result;

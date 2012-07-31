@@ -50,13 +50,17 @@
             {
                 [self changeState:kStateDead];
             } else {
+                PLAYSOUNDEFFECT(VIKING_HAMMERHIT1);
                 action = [CCAnimate actionWithAnimation:takingAHitAnim restoreOriginalFrame:NO];
             }
             break;
             
         case kStateDead:
             CCLOG(@"RadarDish->Changing state to Dead");
+            PLAYSOUNDEFFECT(VIKING_HAMMERHIT2);
+            PLAYSOUNDEFFECT(ENEMYROBOT_DYING);
             action = [CCAnimate actionWithAnimation:blowingUpAnim restoreOriginalFrame:NO];
+            break;
             
         default:
             CCLOG(@"Unhandled state %d in RadarDish", newState);
