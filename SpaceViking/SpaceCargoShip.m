@@ -39,6 +39,7 @@
     if ( (self = [super init]) ) {
         CCLOG(@"SpaceCargoShip init");
         hasDroppedMallet = NO;
+        soundNumberToPlay = 0;
         float shipHeight = screenSize.height * 0.71f;
         
         CGPoint position1 = ccp(screenSize.width * -0.48f, shipHeight);
@@ -50,22 +51,27 @@
                                                        [CCMoveTo actionWithDuration:0.01f position:position1],
                                                        [CCScaleTo actionWithDuration:0.01f scale:0.5f],
                                                        [CCFlipX actionWithFlipX:YES],
+                                                       [CCCallFunc actionWithTarget:self selector:@selector(playSpaceCargoShipSound)],
                                                        [CCMoveTo actionWithDuration:8.5f
                                                                            position:position2],
                                                        [CCScaleTo actionWithDuration:0.1f scale:1.0f],
                                                        [CCFlipX actionWithFlipX:NO],
+                                                       [CCCallFunc actionWithTarget:self selector:@selector(playSpaceCargoShipSound)],
                                                        [CCMoveTo actionWithDuration:7.5
                                                                            position:position3],
                                                        [CCScaleTo actionWithDuration:0.1f scale:2.0f],
                                                        [CCFlipX actionWithFlipX:YES],
+                                                       [CCCallFunc actionWithTarget:self selector:@selector(playSpaceCargoShipSound)],
                                                        [CCMoveTo actionWithDuration:6.5f
                                                                            position:position2],
                                                        [CCFlipX actionWithFlipX:NO],
                                                        [CCScaleTo actionWithDuration:0.1f scale:2.0f],
+                                                       [CCCallFunc actionWithTarget:self selector:@selector(playSpaceCargoShipSound)],
                                                        [CCMoveTo actionWithDuration:5.5
                                                                            position:position3],
                                                        [CCFlipX actionWithFlipX:YES],
                                                        [CCScaleTo actionWithDuration:0.1f scale:4.0f],
+                                                       [CCCallFunc actionWithTarget:self selector:@selector(playSpaceCargoShipSound)],
                                                        [CCMoveTo actionWithDuration:4.5f
                                                                            position:position2],
                                                        [CCCallFunc actionWithTarget:self selector:@selector(dropCargo)],
@@ -77,4 +83,30 @@
     
     return self;
 }
+
+#pragma mark -
+#pragma mark SoundMethods
+
+-(void) playSpaceCargoShipSound {
+    if (soundNumberToPlay < 2) {
+        PLAYSOUNDEFFECT(SPACECARGOSHIP_FAR);
+    } else if (soundNumberToPlay == 2) {
+        PLAYSOUNDEFFECT(SPACECARGOSHIP_CLOSE_1);
+    } else if (soundNumberToPlay == 3) {
+        PLAYSOUNDEFFECT(SPACECARGOSHIP_CLOSE_2);
+    } else if (soundNumberToPlay == 4) {
+        PLAYSOUNDEFFECT(SPACECARGOSHIP_CLOSE_3);
+    }
+    
+    soundNumberToPlay += 1;
+    if (soundNumberToPlay > 4) {
+        soundNumberToPlay = 0;
+    }
+}
+
 @end
+
+
+
+
+

@@ -11,6 +11,7 @@
 #import "cocos2d.h"
 #import "Constants.h"
 #import "CommonProtocols.h"
+#import "GameManager.h"
 
 
 @interface GameObject : CCSprite {

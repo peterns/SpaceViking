@@ -12,6 +12,7 @@
 {
     BOOL hasDroppedMallet;
     id <GameplayLayerDelegate> delegate;
+    int soundNumberToPlay;
 }
 
 @property (nonatomic, assign) id <GameplayLayerDelegate> delegate;

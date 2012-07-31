@@ -49,6 +49,8 @@ typedef enum {
 // 0 for OFF, 1 for ON
 #define ENEMY_STATE_DEBUG 0
 
+#define AUDIO_MAX_WAITTIME 150
+
 typedef enum {
     kAudioManagerUninitialized = 0,
     kAudioManagerFailed = 1,
@@ -64,10 +66,10 @@ typedef enum {
 #define SFX_LOADED YES
 
 #define PLAYSOUNDEFFECT(...) \
-[[GameManager sharedGameManager] playSoundEffect:@#__VA_ARGS__ ]]
+[[GameManager sharedGameManager] playSoundEffect:@#__VA_ARGS__ ]
 
 #define STOPSOUNDEFFECT(...) \
-[[GameManager sharedGameManager] stopSoundEffect:@#__VA_ARGS__ ]]
+[[GameManager sharedGameManager] stopSoundEffect:@#__VA_ARGS__ ]
 
 
 // Background Music
