@@ -33,6 +33,7 @@
 @property (nonatomic, retain) NSMutableDictionary *listOfSoundEffectFiles;
 @property (nonatomic, retain) NSMutableDictionary *soundEffectsState;
 
+-(CGSize) getDimensionsOfCurrentScene;
 
 +(GameManager*) sharedGameManager;
 

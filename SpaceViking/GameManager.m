@@ -169,7 +169,7 @@ static GameManager* _sharedGameManager = nil;
     
     [self performSelectorInBackground:@selector(unloadAudioForSceneWithID:) withObject:[NSNumber numberWithInt:oldScene]];
     
-    currentScene = oldScene;
+    currentScene = sceneID;
     
 }
 
@@ -480,6 +480,33 @@ static GameManager* _sharedGameManager = nil;
     }
     
     [pool release];
+}
+
+-(CGSize) getDimensionsOfCurrentScene {
+    CGSize screenSize = [[CCDirector sharedDirector] winSize];
+    CGSize levelSize;
+    
+    switch (currentScene) {
+        case kMainMenuScene:
+        case kOptionsScene:
+        case kCreditsScene:
+        case kIntroScene:
+        case kLevelCompleteScene:
+        case kGameLevel1:
+            levelSize = screenSize;
+//            levelSize = CGSizeMake(screenSize.width * 2.0f, screenSize.height);
+            break;
+        case kGameLevel2:
+            levelSize = CGSizeMake(screenSize.width * 2.0f, screenSize.height);
+            break;
+            
+        default:
+            CCLOG(@"Unknown Scene ID, returning default size");
+            levelSize = screenSize;
+            break;
+    }
+    
+    return levelSize;
 }
 
 
