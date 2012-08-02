@@ -71,6 +71,49 @@
     return self;
 }
 
+#pragma mark SCROLLING_CALCULATION
+-(void) adjustLayer {
+    Viking *viking = (Viking*)[sceneSpriteBatchNode getChildByTag:kVikingSpriteTagValue];
+    float vikingXPosition = viking.position.x;
+    CGSize screenSize = [CCDirector sharedDirector].winSize;
+    float halfOfTheScreen = screenSize.width / 2.0f;
+    CGSize levelSize = [[GameManager sharedGameManager] getDimensionsOfCurrentScene];
+    
+    if ((vikingXPosition > halfOfTheScreen) && (vikingXPosition < (levelSize.width - halfOfTheScreen))) {
+        // Background should scroll
+        float newXPosition = halfOfTheScreen - vikingXPosition;
+        [self setPosition:ccp(newXPosition, self.position.y)];
+    }
+}
+
+#pragma mark -
+-(void) update:(ccTime) deltaTime {
+    CCArray *listOfGameObjects = [sceneSpriteBatchNode children];
+    
+    for (GameCharacter *tempChar in listOfGameObjects) {
+        [tempChar updateStateWithDeltaTime:deltaTime andListOfGameObjects:listOfGameObjects];
+    }
+    
+    [self adjustLayer];
+    
+    // Check to see if the Viking is dead
+    GameCharacter *tempChar = (GameCharacter*)[sceneSpriteBatchNode getChildByTag:kVikingSpriteTagValue];
+    
+    if (([tempChar characterState] == kStateDead) &&
+        ([tempChar numberOfRunningActions] == 0)) {
+        [[GameManager sharedGameManager] setHasPlayerDied:YES];
+        [[GameManager sharedGameManager] runSceneWithID:kLevelCompleteScene];
+    }
+    
+    // Check to see if the RadarDish is dead
+    tempChar = (GameCharacter *)[sceneSpriteBatchNode getChildByTag:kRadarDishTagValue];
+
+    if(([tempChar characterState] == kStateDead) &&
+       ([tempChar numberOfRunningActions] == 0)) {
+        [[GameManager sharedGameManager] runSceneWithID:kLevelCompleteScene];
+    }
+}
+
 @end
 
 

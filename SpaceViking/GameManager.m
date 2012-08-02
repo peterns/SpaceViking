@@ -8,11 +8,13 @@
 
 #import "GameManager.h"
 #import "GameScene.h"
+#import "GameScene2.h"
 #import "MainMenuScene.h"
 #import "OptionsScene.h"
 #import "CreditsScene.h"
 #import "IntroScene.h"
 #import "LevelCompleteScene.h"
+
 
 
 @implementation GameManager
@@ -106,7 +108,7 @@ static GameManager* _sharedGameManager = nil;
             break;
             
         case kGameLevel2:
-            // Placeholder for Level 2
+            sceneToRun = [GameScene2 node];
             break;
             
         case kGameLevel3:
